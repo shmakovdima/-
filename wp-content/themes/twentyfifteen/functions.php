@@ -34,6 +34,8 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 660;
 }
 
+show_admin_bar(false);
+
 /**
  * Twenty Fifteen only works in WordPress 4.1 or later.
  */
