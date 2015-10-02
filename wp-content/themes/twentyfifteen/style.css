@@ -5,6 +5,15 @@ html {
 	background: rgb(255, 255, 255);
 }
 
+a {
+	color: white;
+	transition: 200ms all linear;
+}
+
+a:hover {
+
+}
+
 span {
 	font-family: "OpenSans";
 	color:  #fdfdfd;
@@ -13,17 +22,8 @@ span {
 	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.56);	
 }
 
-ul {
-	position: relative;
-	float: right;
-	display: inline;
-	list-style: none;
-}
+/*Footer*/
 
-ul li {
-	display: block;
-	float: left;
-}
 
 footer {
 	position: relative;
@@ -40,9 +40,27 @@ footer span {
 	text-align: left;
 }
 
+footer div+div+div span {
+	text-align: right;
+	float: right;
+}
+
+footer span a {
+	font-size: 20px;
+	color:  rgba(255, 255, 255, 0.6);
+}
+
+footer span a:hover {
+	color: white;
+}
+
+footer span a + a {
+	margin-left: 25px;
+}
+
 .footer__logo {
 	background: url("img/logo.svg") center center no-repeat;
-	background-size: 75%  auto ;
+	background-size: auto 60%  ;
 }
 
 @media (max-width: 767px) { 
@@ -59,7 +77,12 @@ footer span {
 	footer div div div.footer__logo {
 		height: 100px;
 		line-height: 100px;
-		background-size: 50%  auto ;
+		background-size:  50% auto  ;
+	}
+
+	footer div+div+div span {
+		float: none;
+		text-align: center;
 	}
 }
 

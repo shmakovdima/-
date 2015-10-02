@@ -19,12 +19,12 @@
 				</div>
 				<div class="col-sm-4 footer__logo"></div>
 				<div class="col-sm-4">
-					<ul>
-						<li><a href="https://vk.com/test" title="Мы в Вконтакте" class="fa-vk"></a></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+					<span>
+						<a href="https://vk.com/test" title="Мы в ВКонтакте" ><i class="fa fa-vk"></i></a>
+						<a href="https://fb.com/test" title="Мы в Facebook" ><i class="fa fa-facebook"></i></a>
+						<a href="https://youtube.com/test" title="Мы в Youtube" ><i class="fa fa-youtube"></i></a>
+						<a href="https://instagram.com/test" title="Мы в Instagram" ><i class="fa fa-instagram"></i></a>
+					</span>
 				</div>
 			</div>
 		</div>
