@@ -18,7 +18,14 @@
 					<span class="align-left">2015 Copyright VeroGusto Travel</span>
 				</div>
 				<div class="col-sm-4 footer__logo"></div>
-				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer><!-- .site-footer -->
