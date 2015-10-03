@@ -7,8 +7,6 @@ html, body {
 	margin: 0px;
 }
 
-
-
 a {
 	color: white;
 	transition: 200ms all linear;
@@ -46,6 +44,10 @@ h2 {
 
 }
 
+h2.white {
+	color: white;
+}
+
 /*Карта мира*/
 #world_map {
 	
@@ -59,11 +61,9 @@ h2 {
 
 #world_map h2 {
 	line-height: 40px;
-	font-size: 30px;
 	color:  #515151;
 	text-align: left;
 	padding-left: 0px;
-
 }
 
 #world_map div {
@@ -74,12 +74,9 @@ h2 {
 	height: 100%;
 }
 
-
-
-
 #world_map span {
 	line-height: 17px;
-	font-family: OpenSans;
+	font-family: "OpenSans";
 	color:  #515151;
 	font-size: 15px;/* Приближение из-за подстановки шрифтов */
 	font-weight: 400;
@@ -90,10 +87,7 @@ h2 {
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
-
 }
-
-
 
 .world_map__europe {
 	background: url("img/parts of the world/europe.svg") top center no-repeat;
@@ -124,6 +118,34 @@ h2 {
 	background: url("img/parts of the world/south_america.svg")  top center no-repeat;
 	background-size: contain;
 }
+
+
+/*Схема работы*/
+
+#work_scheme {
+	height: 695px ;
+	background: url(img/work_scheme.png) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#work_scheme h2 {
+	background: url(img/how_we_work.svg) left no-repeat;
+	background-size: auto 140%;
+}
+
+#work_scheme .h2__wrap span {
+	padding: 10px;
+	border-radius: 5px;
+	position: relative;
+	display: inline;
+	text-align: center;
+	background-color:  rgba(0, 0, 0, 0.5);
+	font-size: 16px;/* Приближение из-за подстановки шрифтов */
+	font-weight: normal;
+	line-height: 20px;/* Приближение из-за подстановки шрифтов */
+	text-align: center;
+}
+
 
 
 /*Отзывы*/
@@ -248,6 +270,7 @@ footer span {
 footer div+div+div span {
 	text-align: right;
 	float: right;
+	text-shadow: none;
 }
 
 footer span a {
@@ -282,9 +305,6 @@ footer span a + a {
 		line-height: 100px;
 		font-size: 20px;
 	}
-
-
-
 
 	/*Отзывы*/
 
@@ -328,4 +348,46 @@ footer span a + a {
 		text-align: center;
 	}
 }
+
+@media (max-width: 992px) { 
+
+	#world_map div div div:first {
+		height: auto;
+	}
+
+	#world_map {
+		height: auto;
+		overflow: hidden;
+
+	}
+
+	#world_map .container {
+		height: auto;
+	}
+
+	#world_map .container div div div:not(.world_map__label) {
+		height: 200px;
+	}
+
+	#world_map {
+		padding-top: 45px;
+	}
+
+	#world_map h2 {
+		font-size: 26px;
+		width: 100%;
+		display: block;
+		font-size: 30px;
+		white-space: nowrap;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1200px) and (min-width: 992px) { 
+	#world_map h2 {
+		font-size: 26px;
+	}
+}
+
+
 

@@ -22,12 +22,12 @@ get_header(); ?>
 <section id="world_map" class="wow fadeInDown animated">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3">
+			<div class="col-md-3 col-sm-12 col-xs-12 world_map__label">
 				<h2>Отправьтесь<br> 
 				в любую точку<br>
 				мира!</h2>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-md-3  col-xs-12">
 				<div class="col-xs-6 world_map__europe">
 					<span>Европа</span>
 				</div>
@@ -35,7 +35,7 @@ get_header(); ?>
 					<span>Азия</span>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-md-3  col-xs-12">
 				<div class="col-xs-6 world_map__south-america">
 					<span>Южная<br> америка</span>
 				</div>
@@ -43,7 +43,7 @@ get_header(); ?>
 					<span>Северная<br> америка</span>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-md-3  col-xs-12">
 				<div class="col-xs-6 world_map__africa">
 					<span>Африка</span>
 				</div>
@@ -59,6 +59,12 @@ get_header(); ?>
 <section id="burn_tours" class="wow fadeInDown animated">
 </section>
 <section id="work_scheme" class="wow fadeInDown animated">
+    <div class="h2__wrap">
+      <h2 class="white">Схема работы</h2>
+      <br>
+      <span>Наша компания индивидуально подходит к каждому клиенту,
+тем самым достигая первокласного обслуживания</span>
+    </div>
 </section>
 <section id="review" class="wow fadeInDown animated">
 	<div class="h2__wrap">
