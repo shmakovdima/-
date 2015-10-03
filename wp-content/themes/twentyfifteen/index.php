@@ -37,10 +37,10 @@ get_header(); ?>
 			</div>
 			<div class="col-sm-3">
 				<div class="col-xs-6 world_map__south-america">
-					<span>Южная америка</span>
+					<span>Южная<br> америка</span>
 				</div>
 				<div class="col-xs-6 world_map__north-america">
-					<span>Северная америка</span>
+					<span>Северная<br> америка</span>
 				</div>
 			</div>
 			<div class="col-sm-3">

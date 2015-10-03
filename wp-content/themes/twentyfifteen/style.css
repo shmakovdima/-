@@ -80,15 +80,16 @@ h2 {
 #world_map span {
 	line-height: 17px;
 	font-family: OpenSans;
-color:  #515151;
-font-size: 15px;/* Приближение из-за подстановки шрифтов */
-font-weight: 400;
-height: 34px;
-display: block;
-position: absolute;
-bottom: 0px;
-width: 100%;
-text-align: center;
+	color:  #515151;
+	font-size: 15px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 400;
+	height: 15px;
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
 
 }
 
