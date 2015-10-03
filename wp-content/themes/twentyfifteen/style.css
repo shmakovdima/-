@@ -1,9 +1,13 @@
 @import "http://webfonts.ru/import/osans.css";
 
-html {
+html, body {
 	font-family: 'Open Sans';
 	background: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
 }
+
+
 
 a {
 	color: white;
@@ -19,7 +23,205 @@ span {
 	color:  #fdfdfd;
 	font-size: 14px;/* Приближение из-за подстановки шрифтов */
 	font-weight: 400;
-	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.56);	
+
+}
+.h2__wrap {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+
+}
+h2 {
+	display: inline;
+	position: relative;
+	margin: 0 auto;
+	padding-left: 60px;	
+	font-weight: 400;
+	color:  #5a5a5a;
+	line-height: 200px;
+	font-size: 30px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 400;
+	text-transform: uppercase;
+
+}
+
+/*Карта мира*/
+#world_map {
+	
+	padding-top: 90px;
+	height: 300px;
+}
+
+#world_map .container {
+	height: 120px;
+}
+
+#world_map h2 {
+	line-height: 40px;
+	font-size: 30px;
+	color:  #515151;
+	text-align: left;
+	padding-left: 0px;
+
+}
+
+#world_map div {
+	padding: 0px;
+}
+
+#world_map div div {
+	height: 100%;
+}
+
+
+
+
+#world_map span {
+	line-height: 17px;
+	font-family: OpenSans;
+color:  #515151;
+font-size: 15px;/* Приближение из-за подстановки шрифтов */
+font-weight: 400;
+height: 34px;
+display: block;
+position: absolute;
+bottom: 0px;
+width: 100%;
+text-align: center;
+
+}
+
+
+
+.world_map__europe {
+	background: url("img/parts of the world/europe.svg") top center no-repeat;
+	background-size: contain;
+}
+
+.world_map__asia {
+	background: url("img/parts of the world/asia.svg")  top center no-repeat;
+	background-size: contain;
+}
+
+.world_map__australia {
+	background: url("img/parts of the world/australia.svg")  top center no-repeat;
+	background-size: contain;
+}
+
+.world_map__africa {
+	background: url("img/parts of the world/africa.svg")  top center no-repeat;
+	background-size: contain;
+}
+
+.world_map__north-america {
+	background: url("img/parts of the world/north_america.svg")  top center no-repeat;
+	background-size: contain;
+}
+
+.world_map__south-america {
+	background: url("img/parts of the world/south_america.svg")  top center no-repeat;
+	background-size: contain;
+}
+
+
+/*Отзывы*/
+
+#review h2  {
+	background: url(img/comments.svg) left no-repeat;
+	background-size: auto 140%;
+}
+
+.review__container {
+	min-height: 280px;
+	padding-bottom: 20px;
+}
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+ 
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  margin: 0px;
+  width: 10px;
+  height: 10px;
+  background: rgb(237, 237, 237);
+}
+#quote-carousel .carousel-indicators .active 
+{
+width: 10px;
+  height: 10px;
+  background: rgb(169, 169, 169);
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
 }
 
 /*Footer*/
@@ -28,6 +230,7 @@ span {
 footer {
 	position: relative;
 	width: 100%;
+	float: left;
 	background-color:  #203e51;
 }
 
@@ -38,6 +241,7 @@ footer div div div {
 
 footer span {
 	text-align: left;
+	text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.56);	
 }
 
 footer div+div+div span {
@@ -63,7 +267,45 @@ footer span a + a {
 	background-size: auto 60%  ;
 }
 
-@media (max-width: 767px) { 
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+@media (max-width: 768px) { 
+	h2 {
+		line-height: 100px;
+		font-size: 20px;
+	}
+
+
+
+
+	/*Отзывы*/
+
+	 #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+         width: 15px;
+        height: 15px;
+    }
+
+
+
+	/*Footer*/
+
 	footer div span {
 		text-align: center;
 		width: 100%;

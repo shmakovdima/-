@@ -11,7 +11,7 @@
 ?>
 
 
-	<footer role="contentinfo">
+	<footer role="contentinfo" >
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -35,6 +35,8 @@
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bootstrap.min.js"></script>
+
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/scripts.js"></script>
 <?php wp_footer(); ?>
 
 </body>
