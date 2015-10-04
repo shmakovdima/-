@@ -1,5 +1,42 @@
 @import "http://webfonts.ru/import/osans.css";
 
+/*boootsrap 15 colums*/
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+
 html, body {
 	font-family: 'Open Sans';
 	background: rgb(255, 255, 255);
@@ -47,6 +84,87 @@ h2 {
 
 h2.white {
 	color: white;
+}
+
+.btn,  .btn:focus  {
+	color:  rgba(255, 255, 255, 0.9);
+	font-size: 18px;/* Приближение из-за подстановки шрифтов */
+	font-weight: normal;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: #b0ce5e;
+	background: -webkit-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
+	background: -moz-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
+	background: -o-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
+	background: -ms-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
+	background: linear-gradient(0deg, #a2c44d 0%, #b1cf60 100%);
+	padding: 8px 14px;
+	box-shadow: 1px 2px 0px 0px #7b923d;
+	transition: 400ms all linear;
+}
+
+.btn:hover {
+	background: #b0ce5e;
+	background: linear-gradient(0deg, #b1cf60 0%, #b1cf60 100%);
+	outline: none;
+	color: rgba(255, 255, 255, 0.9);
+	transition: 400ms all linear;
+}
+
+.btn:active, .btn:focus  {
+	margin-top: 1px;
+	outline: none!important;
+	background:#a2c44d;
+	border: none;
+	color:  rgba(255, 255, 255, 1);
+	box-shadow: 1px 1px 0px 0px #7b923d;
+	transition: 400ms all linear;
+}
+
+
+
+.order__form {
+	border-radius: 5px;
+	padding: 10px;
+	background-color:  rgba(16, 16, 16, 0.4);
+}
+
+.order__form span {
+	color:  rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+.form-control {
+	background-color:  rgba(255, 255, 255, 0.16);
+	color: white;
+}
+
+.form-control:focus {
+	
+}
+
+.wpcf7-response-output {
+	display: none!important;
+}
+
+.order__form form div+div {
+	margin-top: 15px;
+}
+
+div.wpcf7 {
+	overflow: hidden!important;
+}
+.order__form .btn {
+	width: 100%;
+}
+
+div.wpcf7-validation-errors {
+	display: none!important;
 }
 
 /*Карта мира*/
@@ -164,6 +282,79 @@ h2.white {
     border-bottom: 15px solid rgba(0, 0, 0, 0.5);
 }
 
+.work_scheme__steps {
+	height: 200px;
+	margin-top: 70px;
+}
+
+.work_scheme__steps__line-left::before {
+	content: "";
+	top: 50%;
+	position: absolute;
+	height: 3px;
+	width: 25%;
+	margin-top: -6px;
+	left: 0px;
+	color: white;
+	display: block;
+	background: url(img/steps/circle.svg) repeat-x;
+	background-size: auto 3px;
+}
+
+.work_scheme__steps__line-right::after {
+	content: "";
+	top: 50%;
+	position: absolute;
+	height: 3px;
+	width: 25%;
+	margin-top: -6px;
+	right: 0px;
+	color: white;
+	display: block;
+	background: url(img/steps/circle.svg) repeat-x;
+	background-size: auto 3px;
+}
+
+.work_scheme__steps  span {
+	position: absolute;
+	bottom: -10px;
+	color: white;
+	width: 100%;
+	left: 0px;
+	font-size: 17px;
+	font-weight: 400;
+	display: block;
+	    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.56);
+}
+
+.work_scheme__1 {	
+	background: url(img/steps/1.svg) top center no-repeat;
+	background-size: 120px 100%;
+}
+
+.work_scheme__2 {	
+	background: url(img/steps/2.svg) top center no-repeat;
+	background-size: 120px 100%;
+}
+
+.work_scheme__3 {	
+	background: url(img/steps/3.svg) top center no-repeat;
+	background-size: 120px 100%;
+}
+
+.work_scheme__4 {	
+	background: url(img/steps/4.svg) top center no-repeat;
+	background-size: 120px 100%;
+}
+
+.work_scheme__5 {	
+	background: url(img/steps/5.svg) top center no-repeat;
+	background-size: 120px 100%;
+}
+
+.work_scheme__button {
+	margin-top: 100px;
+}
 
 /*Отзывы*/
 
@@ -174,7 +365,6 @@ h2.white {
 
 .review__container {
 	min-height: 280px;
-	padding-bottom: 20px;
 }
 
 /* carousel */
@@ -190,11 +380,12 @@ h2.white {
 	top: -35px;
 	fill: #cfcfcf;
 	color:#cfcfcf ;
-  margin-top: -30px;
-  background: none;
-  color: #222;
-  font-size: 2.3em;
-  text-shadow: none;
+	  margin-top: -30px;
+	  background: none;
+	  color: #222;
+	  font-size: 2.3em;
+	  text-shadow: none;
+	  transition: 300ms all linear;
 }
 /* Previous button  */
 #quote-carousel .carousel-control.left 
@@ -213,13 +404,14 @@ h2.white {
   right: -12px !important;
 }
 
-#quote-carousel .carousel-control:hover {
+#quote-carousel .carousel-control.left:hover {
 	fill: #b0b0b0;
 	color: #b0b0b0;
 }
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
 {
+
   right: 50%;
   top: auto;
   bottom: 0px;
@@ -228,6 +420,7 @@ h2.white {
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li 
 {
+ transition: 300ms all linear;
   margin: 0px;
   width: 10px;
   height: 10px;
@@ -288,6 +481,21 @@ width: 10px;
 small:before {
 	display: none;
 }
+
+
+/*Контакты*/
+
+#contact {
+	height: 610px;
+	background: url(img/contact.png) center bottom no-repeat;
+	background-size: contain;
+}
+
+#contact h2  {
+	background: url(img/contacts.svg) left no-repeat;
+	background-size: auto 140%;
+}
+
 
 
 
@@ -361,17 +569,44 @@ footer span a + a {
 }
 
 @media (max-width: 768px) { 
+
+	#contact {
+		height: auto;
+	}
+
+	.work_scheme__steps__line-right::after {
+		display: none;
+	}
+
+	.work_scheme__steps__line-left::before {
+		display: none;
+	}
+
+	.work_scheme__steps {
+		height: 200px;
+		margin-top: 0px;
+		    background-size: 200px 100%;
+	}
+
+	.work_scheme__button {
+		margin-bottom: 90px;
+	}
+
+	#work_scheme .h2__wrap span {
+		top: -30px;
+	}
+
+	#work_scheme {
+		height: auto!important;
+	}
+
 	h2 {
-		line-height: 100px;
-		font-size: 20px;
+		line-height: 160px;
+		font-size: 30px;
 	}
 
 	.h2__wrap {
 		height: auto;
-	}
-
-	#quote-carousel .carousel-control {
-		top: -230px;
 	}
 
 	#quote-carousel .carousel-control.right {
@@ -399,7 +634,9 @@ footer span a + a {
         height: 15px;
     }
 
-
+    #work_scheme {
+    	height: auto;
+    }
 
 	/*Footer*/
 
@@ -425,7 +662,29 @@ footer span a + a {
 	}
 }
 
+@media (max-width: 992px) and(min-width:  768px) { 
+	
+
+
+}
+
 @media (max-width: 992px) { 
+
+	#work_scheme {
+		height: 630px;
+	}
+
+	#quote-carousel .carousel-control {
+		top: -230px;
+	}
+
+	.work_scheme__steps {
+		margin-top: 25px;
+	}
+
+	.work_scheme__button {
+		margin-top: 80px;
+	}
 
 	.review__container {
 		margin-bottom: 30px;
@@ -473,10 +732,11 @@ footer span a + a {
 }
 
 @media (max-width: 1200px) and (min-width: 992px) { 
+
+
 	#world_map h2 {
 		font-size: 26px;
 	}
 }
-
 
 

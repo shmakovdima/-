@@ -18,9 +18,9 @@
 get_header(); ?>
 
 
-<section id="introduction" class="wow fadeInDown animated">
+<section id="introduction" class="wow fadeIn animated">
 </section>
-<section id="world_map" class="wow fadeInDown animated">
+<section id="world_map" class="wow fadeIn animated">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-sm-12 col-xs-12 world_map__label">
@@ -55,11 +55,11 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-<section id="top_tours" class="wow fadeInDown animated">
+<section id="top_tours" class="wow fadeIn animated">
 </section>
-<section id="burn_tours" class="wow fadeInDown animated">
+<section id="burn_tours" class="wow fadeIn animated">
 </section>
-<section id="work_scheme" class="wow fadeInDown animated">
+<section id="work_scheme" class="wow fadeIn animated">
     <div class="h2__wrap">
       <h2 class="white">Схема работы</h2>
       <br>
@@ -67,12 +67,36 @@ get_header(); ?>
       тем самым достигая первокласного обслуживания</span>
     </div>
     <div class="container">
-        <div class="row">
-            
+        <div class="row text-center">
+            <div class="col-sm-15 col-sm-3 work_scheme__1 work_scheme__steps work_scheme__steps__line-right">
+                <span>Принимаем вашу <br>заявку</span>
+            </div>
+             <div class="col-sm-15 col-sm-3 work_scheme__2 work_scheme__steps work_scheme__steps__line-left work_scheme__steps__line-right">
+                <span>Узнаем Ваши <br>
+пожелания</span>
+            </div>
+             <div class="col-sm-15 col-sm-3 work_scheme__3 work_scheme__steps work_scheme__steps__line-left work_scheme__steps__line-right">
+                <span>Разрабатываем <br>
+программу отдыха</span>
+            </div>
+             <div class="col-sm-15 col-sm-3 work_scheme__4 work_scheme__steps work_scheme__steps__line-left work_scheme__steps__line-right">
+                <span>Помогаем  правильно<br>
+собрать документы</span>
+            </div>
+             <div class="col-sm-15 col-sm-3 work_scheme__5 work_scheme__steps work_scheme__steps__line-left">
+                <span>Вы наслаждаетесь<br>
+отдыхом!</span>    
+            </div>
+          
         </div>
     </div>
+      <div class="container">
+        <div class="row text-center work_scheme__button">
+            <button class="btn">Заказать подбор тура!</button>
+        </div>
+      </div>
 </section>
-<section id="review" class="wow fadeInDown animated">
+<section id="review" class="wow fadeIn animated">
 	<div class="h2__wrap">
 		<h2>Отзывы клиентов</h2>
 	</div>
@@ -134,17 +158,7 @@ get_header(); ?>
 
 
              <?php endforeach; ?>
-              <?php endif; ?> 
-
-
-
-
-
-
-         
-          
-         
-          
+              <?php endif; ?>
         </div>
         
         <!-- Carousel Buttons Next/Prev -->
@@ -155,7 +169,30 @@ get_header(); ?>
   		</div>
 	</div>
 </section>
-<section id="contact" class="wow fadeInDown animated">
+<section id="contact" class="wow fadeIn animated">
+  <div class="h2__wrap">
+    <h2>Наши контакты</h2>
+  </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+              <div class="contact__placemark">
+                  <div class="contact__logo">
+                  </div>
+                  <span class="contact__adress">ул. Веры Хоружей 1А</span>
+                  <span>+375 (29) 684-43-54;</span>  
+                  <span>+375 (29) 444-52-23;</span>
+              </div>
+          </div>
+           <div class="col-sm-6">
+                <div class="col-md-8 col-lg-6 order__form">
+                    <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
+                    <span>Гарантируем конфиденциальность<br> 
+                    ваших данных</span>
+                </div>
+          </div>
+        </div>
+    </div>
 </section>
 
 
