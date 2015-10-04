@@ -187,21 +187,35 @@ h2.white {
 /* Control buttons  */
 #quote-carousel .carousel-control
 {
+	top: -35px;
+	fill: #cfcfcf;
+	color:#cfcfcf ;
+  margin-top: -30px;
   background: none;
   color: #222;
   font-size: 2.3em;
   text-shadow: none;
-  margin-top: 30px;
 }
 /* Previous button  */
 #quote-carousel .carousel-control.left 
 {
+  background: url("img/slider_arrow_right.svg") center center no-repeat;
+  background-size: 46px 46px  ;
+  right: -12px !important;
   left: -12px;
+  transform: rotate(180deg);
 }
 /* Next button  */
 #quote-carousel .carousel-control.right 
 {
+  background: url("img/slider_arrow_right.svg") center center no-repeat;
+  background-size: 46px 46px  ;
   right: -12px !important;
+}
+
+#quote-carousel .carousel-control:hover {
+	fill: #b0b0b0;
+	color: #b0b0b0;
 }
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
@@ -227,8 +241,32 @@ width: 10px;
 }
 #quote-carousel img
 {
-  width: 250px;
+  width: 100px;
   height: 100px
+}
+
+#quote-carousel p:before {
+	 content: "";
+	 height: 15px;
+	 border: 15px solid transparent;
+    border-right: 15px solid #12a3ff;
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    display: block;
+}
+
+
+
+#quote-carousel p {
+	background-color:  #12a3ff;
+	padding: 20px;
+	font-family: "OpenSans";
+	border-radius: 5px;
+	color:  #ffffff;
+	font-size: 17px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 400;
+	margin-bottom: 20px;
 }
 /* End carousel */
 
@@ -241,12 +279,17 @@ width: 10px;
     margin-bottom: 10px;
 }
 
-.item blockquote p:before {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    float: left;
-    margin-right: 10px;
+#quote-carousel blockquote small {
+	font-family: "OpenSans";
+	color:  #5a5a5a;
+	font-size: 15px
 }
+
+small:before {
+	display: none;
+}
+
+
 
 
 
@@ -323,6 +366,22 @@ footer span a + a {
 		font-size: 20px;
 	}
 
+	.h2__wrap {
+		height: auto;
+	}
+
+	#quote-carousel .carousel-control {
+		top: -230px;
+	}
+
+	#quote-carousel .carousel-control.right {
+		right: -6px!important;
+	}
+
+	#quote-carousel .carousel-control.left {
+		left: -6px!important;
+	}
+
 	/*Отзывы*/
 
 	 #quote-carousel .carousel-indicators {
@@ -367,6 +426,18 @@ footer span a + a {
 }
 
 @media (max-width: 992px) { 
+
+	.review__container {
+		margin-bottom: 30px;
+	}
+
+	#quote-carousel p {
+		margin-top: 30px;
+	}
+
+	#quote-carousel p:before {
+		display: none;
+	}
 
 	#world_map div div div:first {
 		height: auto;

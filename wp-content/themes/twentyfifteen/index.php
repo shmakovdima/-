@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -63,7 +64,12 @@ get_header(); ?>
       <h2 class="white">Схема работы</h2>
       <br>
       <span>Наша компания индивидуально подходит к каждому клиенту,<br>
-тем самым достигая первокласного обслуживания</span>
+      тем самым достигая первокласного обслуживания</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            
+        </div>
     </div>
 </section>
 <section id="review" class="wow fadeInDown animated">
@@ -75,63 +81,75 @@ get_header(); ?>
     	<div class='col-md-12'>
       <div class="carousel slide" data-ride="carousel" id="quote-carousel">
         <!-- Bottom Carousel Indicators -->
+
         <ol class="carousel-indicators">
-          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#quote-carousel" data-slide-to="1"></li>
-          <li data-target="#quote-carousel" data-slide-to="2"></li>
+          <?php $counter = 0; ?>
+          <?php $posts = get_posts("category_name=reviews_clients&orderby=date&post_status=publish"); ?>
+          <?php if ($posts) : ?>
+          <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+            <?php 
+              if ($counter==0) {
+                echo ' <li data-target="#quote-carousel" data-slide-to="'.$counter.'" class="active"></li>';
+              }else{
+                echo '<li data-target="#quote-carousel" data-slide-to="'.$counter.'"></li>';
+              }
+              $counter++;
+            ?>
+             <?php endforeach; ?>
+              <?php endif; ?> 
         </ol>
         
+
+
+
         <!-- Carousel Slides / Quotes -->
         <div class="carousel-inner">
-        
           <!-- Quote 1 -->
-          <div class="item active">
-            <blockquote>
+
+           <?php $counter = 0; ?>
+          <?php $posts = get_posts("category_name=reviews_clients&orderby=date&post_status=publish"); ?>
+          <?php if ($posts) : ?>
+          <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+            <?php 
+              if ($counter==0) {
+                echo '  <div class="item active">';
+              }else{
+                echo ' <div class="item">';
+              }
+               $counter++;
+            ?>
+              <blockquote>
               <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
-                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                <div class="col-md-2 text-center col-md-offset-2">
+                  <?php the_post_thumbnail('full'); ?>
+                   <small><?php the_title() ?></small>
                 </div>
-                <div class="col-sm-9">
-                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
-                  <small>Someone famous</small>
+                <div class="col-md-6">
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.</p>
+                 
                 </div>
               </div>
             </blockquote>
           </div>
-          <!-- Quote 2 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
-                  <small>Someone famous</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-                  <small>Someone famous</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
+
+
+             <?php endforeach; ?>
+              <?php endif; ?> 
+
+
+
+
+
+
+         
+          
+         
+          
         </div>
         
         <!-- Carousel Buttons Next/Prev -->
-        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"></a>
       </div>                          
     	</div>
   		</div>
