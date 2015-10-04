@@ -58,6 +58,27 @@ get_header(); ?>
 <section id="top_tours" class="wow fadeIn animated">
 </section>
 <section id="burn_tours" class="wow fadeIn animated">
+  <div class="h2__wrap">
+      <span>Наши туры</span>
+      <br>
+      <h2>Горячие туры</h2>
+  </div>
+   <div class="container">
+        <div class="row">
+            <div class="item_tour col-sm-3">
+                <button class="more">Подробнее</button>
+
+            </div>
+        </div>
+   </div>
+
+
+  <div class="container">
+        <div class="row text-center">
+            <button class="btn">Заказать подбор тура!</button>
+        </div>
+  </div>
+
 </section>
 <section id="work_scheme" class="wow fadeIn animated">
     <div class="h2__wrap">
@@ -122,10 +143,6 @@ get_header(); ?>
              <?php endforeach; ?>
               <?php endif; ?> 
         </ol>
-        
-
-
-
         <!-- Carousel Slides / Quotes -->
         <div class="carousel-inner">
           <!-- Quote 1 -->
@@ -175,17 +192,34 @@ get_header(); ?>
   </div>
     <div class="container">
         <div class="row">
-          <div class="col-sm-6">
-              <div class="contact__placemark">
-                  <div class="contact__logo">
+          <div class="col-sm-6 text-center">
+            <div class="contact__positioned__small col-xs-10 col-xs-offset-1">
+                <div class="contact__logo">
+                </div>
+                <span class="contact__adress">ул. Веры Хоружей 1А</span>
+                <span>+375 (29) 684-43-54;</span>  
+                <span>+375 (29) 444-52-23;</span>
+
+
+            </div>
+            <div class ="contact__positioned" >
+                <div class="contact__placemark">
+             
+                    <div class="contact__placemark__boxed">
+                        <div class="contact__logo">
+                        </div>
+                        <span class="contact__adress">ул. Веры Хоружей 1А</span>
+                        <span>+375 (29) 684-43-54;</span>  
+                        <span>+375 (29) 444-52-23;</span>
+                    </div>
+                 
+                   </div>
+                  <div class="tringled"></div>
                   </div>
-                  <span class="contact__adress">ул. Веры Хоружей 1А</span>
-                  <span>+375 (29) 684-43-54;</span>  
-                  <span>+375 (29) 444-52-23;</span>
-              </div>
-          </div>
+            </div>
+             
            <div class="col-sm-6">
-                <div class="col-md-7 col-lg-6 order__form">
+                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10 col-md-7 col-md-offset-2 col-lg-6 order__form">
                     <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                     <span>Гарантируем конфиденциальность<br> 
                     ваших данных</span>

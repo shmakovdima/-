@@ -2,6 +2,10 @@
 
 /*boootsrap 15 colums*/
 
+section {
+	visibility: hidden;
+}
+
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
@@ -86,38 +90,39 @@ h2.white {
 	color: white;
 }
 
-.btn,  .btn:focus  {
+.btn,  .btn:focus, button.confirm, button.confirm:focus  {
 	color:  rgba(255, 255, 255, 0.9);
 	font-size: 18px;/* Приближение из-за подстановки шрифтов */
 	font-weight: normal;
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	background-color: #b0ce5e;
+	background-color: #b0ce5e!important;
 	background: -webkit-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
 	background: -moz-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
 	background: -o-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
 	background: -ms-linear-gradient(90deg, #a2c44d 0%, #b1cf60 100%);
-	background: linear-gradient(0deg, #a2c44d 0%, #b1cf60 100%);
+	background: linear-gradient(0deg, #a2c44d 0%, #b1cf60 100%)!important;
 	padding: 8px 14px;
-	box-shadow: 1px 2px 0px 0px #7b923d;
+	box-shadow: none;
+	box-shadow: 1px 2px 0px 0px #7b923d!important;
 	transition: 400ms all linear;
 }
 
-.btn:hover {
-	background: #b0ce5e;
-	background: linear-gradient(0deg, #b1cf60 0%, #b1cf60 100%);
+.btn:hover, button.confirm:hover {
+	background: #b0ce5e!important;
+	background: linear-gradient(0deg, #b1cf60 0%, #b1cf60 100%)!important;
 	outline: none;
 	color: rgba(255, 255, 255, 0.9);
 	transition: 400ms all linear;
 }
 
 .btn:active  {
-	background: linear-gradient(0deg, #a2c44d 0%, #a2c44d 100%);
+	background: linear-gradient(0deg, #a2c44d 0%, #a2c44d 100%)!important;
 	outline: none!important;
 	border: none;
 	color:  rgba(255, 255, 255, 1);
-	box-shadow: 1px 1px 0px 0px #7b923d;
+	box-shadow: 1px 1px 0px 0px #7b923d!important;
 	transition: 400ms all linear;
 }
 
@@ -200,9 +205,62 @@ div.wpcf7 {
 	min-width: 100%;
 }
 
+.item_tour {
+	overflow: hidden;
+	min-height: 50px;
+	background-color:  #ffffff;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.18);
+}
+
+.item_tour button {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+	line-height:  47px;
+	height: 47px;
+	border: none;
+	outline: none;
+	background-color:  #12a3ff;
+	color:  #ffffff;
+	font-size: 17px
+}
+.item_tour button *::after {
+	content:  "";
+	display: inline;
+
+	arrow_right.svg
+}
+
+
 div.wpcf7-validation-errors {
 	display: none!important;
 }
+
+/*туры*/
+
+/*Горячие туры*/
+
+#burn_tours h2 {
+	background: url(img/hot_tours.svg) center left no-repeat;
+	background-size: auto 140%;
+}
+
+#burn_tours .h2__wrap span {
+	position: absolute;
+    width: 140px;
+    left: 50%;
+    font-family: "OpenSans";
+    top: 60px;
+    margin-left: -70px;
+    text-align: center;
+    line-height: 30px;
+    color: rgba(90, 90, 90, 0.6);
+    font-size: 24px;
+}
+
+
 
 /*Карта мира*/
 #world_map {
@@ -321,7 +379,7 @@ div.wpcf7-validation-errors {
 
 .work_scheme__steps {
 	height: 200px;
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 .work_scheme__steps__line-left::before {
@@ -533,10 +591,82 @@ small:before {
 	background-size: auto 140%;
 }
 
+.contact__placemark {
+	
+	border-radius: 5px;
+	max-width: 180px;
+	padding-bottom: 18px;
+	float: right;
+	
+	background: white;
+	box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.18);
+}
+
+.contact__positioned {
+	right: 130px;
+	top: 95px;
+	position: absolute;
+}
+
+.contact__positioned__small {
+	padding-bottom: 30px;
+}
 
 
+.contact__placemark__boxed {
+	padding: 10px 15px;
+	background: white;
+	position: relative;
+	z-index: 50;
+	border-radius: 5px;
+		
+}
 
+.tringled {
+	z-index: 3;
+	position: absolute;
+	right: -7.5px;
+	width: 15px;
+	transform: rotate(45deg);
+	height: 15px;
+	top: 40%;
+	background: white;
+	box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.18);
+}
 
+.contact__positioned__small .contact__logo {
+	height: 100px;
+}
+
+.contact__logo {
+	background: url("img/logo.svg") center center no-repeat;
+	background-size: auto 120%;
+	height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.contact__placemark span, .contact__positioned__small span {
+	font-size: 15px;
+	display: block;
+	width: 100%;
+	color:  #504f4f;
+	line-height: 19px;
+	text-align: left;
+}
+
+ .contact__positioned__small span { 
+ 	text-align: center;
+ 	font-size: 26px;
+ 	line-height: 40px;
+ }
+
+span.contact__adress, .contact__positioned__small span.contact__adress {
+	line-height: 40px;
+}
+
+.contact__positioned__small span.contact__adress { 
+	line-height: 80px;
+}
 
 /**
   MEDIA QUERIES
@@ -603,9 +733,30 @@ footer span a + a {
       padding: 0 40px 30px 40px;
     }
     
+ }
+
+.contact__positioned__small {
+	display: none;
 }
 
 @media (max-width: 768px) { 
+
+	.contact__positioned {
+		display: none;
+	}
+
+	.contact__positioned__small {
+		display: block;
+	}
+
+	.tringled {
+    	display: none;	
+    }
+
+
+	.order__form {
+		margin-bottom: 50px;
+	} 
 
 	#contact {
 		height: auto;
@@ -707,6 +858,11 @@ footer span a + a {
 
 @media (max-width: 992px) { 
 
+	.contact__positioned {
+		right: 85px;
+		top: 185px;
+	}
+
 	#work_scheme {
 		height: 630px;
 	}
@@ -770,10 +926,21 @@ footer span a + a {
 
 @media (max-width: 1200px) and (min-width: 992px) { 
 
-
+	.contact__positioned {
+		right: 110px;
+		top: 145px;
+	}
 	#world_map h2 {
 		font-size: 26px;
 	}
 }
+@media  (min-width: 1700px) { 
+	#contact {
+		background-size: 100% auto;
+	} 
 
-
+	.contact__positioned {
+		right: 150px;
+		top: 55px;
+	}
+}

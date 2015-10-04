@@ -11,7 +11,7 @@
 ?>
 
 
-	<footer role="contentinfo" >
+	<footer role="contentinfo" class="wow fadeIn animated" >
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">

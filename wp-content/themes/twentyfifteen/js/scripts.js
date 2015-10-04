@@ -12,9 +12,10 @@ $(document).ready(function() {
 
 
 	jQuery(function(){
-	    jQuery(".contact_phone").mask("+7 (999) 999-9999");
+	    jQuery(".contact_phone").mask("+375 (99) (99) (99) (99)");
 	});
 
+	
 });
 
 $(document).on("focus",".form-control", function(){
