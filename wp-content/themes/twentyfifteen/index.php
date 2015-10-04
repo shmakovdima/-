@@ -185,7 +185,7 @@ get_header(); ?>
               </div>
           </div>
            <div class="col-sm-6">
-                <div class="col-md-8 col-lg-6 order__form">
+                <div class="col-md-7 col-lg-6 order__form">
                     <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                     <span>Гарантируем конфиденциальность<br> 
                     ваших данных</span>

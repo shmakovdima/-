@@ -112,10 +112,9 @@ h2.white {
 	transition: 400ms all linear;
 }
 
-.btn:active, .btn:focus  {
-	margin-top: 1px;
+.btn:active  {
+	background: linear-gradient(0deg, #a2c44d 0%, #a2c44d 100%);
 	outline: none!important;
-	background:#a2c44d;
 	border: none;
 	color:  rgba(255, 255, 255, 1);
 	box-shadow: 1px 1px 0px 0px #7b923d;
@@ -140,12 +139,48 @@ h2.white {
 }
 
 .form-control {
-	background-color:  rgba(255, 255, 255, 0.16);
+	background-color:  transparent;
 	color: white;
+	border: 1px solid white;
+	border-radius: 3px;
+	transition: 200ms all linear;
 }
 
-.form-control:focus {
-	
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+    font-family: "OpenSans";
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+   opacity:  1;
+    font-family: "OpenSans";
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+   opacity:  1;
+    font-family: "OpenSans";
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+    font-family: "OpenSans";
+}
+
+.wpcf7-not-valid-tip {
+	display: none!important;
+}
+
+.form-control.wpcf7-not-valid, .form-control.wpcf7-not-valid:hover {
+	background: #ff125b;
+}
+
+.ajax-loader {
+	display: none!important;
+}
+
+.form-control:focus, .form-control:hover {
+	border: 1px solid white;
+	outline: none;
+	background-color:  rgba(255, 255, 255, 0.16);
 }
 
 .wpcf7-response-output {
@@ -158,9 +193,11 @@ h2.white {
 
 div.wpcf7 {
 	overflow: hidden!important;
+	padding-bottom: 10px;
 }
 .order__form .btn {
-	width: 100%;
+	font-size: 17px;
+	min-width: 100%;
 }
 
 div.wpcf7-validation-errors {

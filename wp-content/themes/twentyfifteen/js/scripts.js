@@ -7,6 +7,16 @@ $(document).ready(function() {
   //Set the carousel options
   $('#quote-carousel').carousel({
     pause: true,
-    interval: 4000,
+    interval: 5000,
   });
+
+
+	jQuery(function(){
+	    jQuery(".contact_phone").mask("+7 (999) 999-9999");
+	});
+
 });
+
+$(document).on("focus",".form-control", function(){
+	$(this).removeClass("wpcf7-not-valid");
+})
