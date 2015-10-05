@@ -65,11 +65,35 @@ get_header(); ?>
   </div>
    <div class="container">
         <div class="row">
-            <div class="item_tour col-sm-3">
-                <button class="more">Подробнее</button>
-
+            <div class="col-md-3 col-sm-6">
+              <div class="item_tour">
+                  <div class="img"></div>
+                  <span class="place"><span>Рим</span>, Италия</span>
+                  <span class="dates"></span>
+                  <span class="price"></span>
+                  <button class="more">Подробнее</button>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="item_tour">
+                  <div class="img"></div>
+                  <button class="more">Подробнее</button>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="item_tour">
+                  <div class="img"></div>
+                  <button class="more">Подробнее</button>
+              </div>
+            </div>
+             <div class="col-md-3 col-sm-6">
+              <div class="item_tour">
+                  <div class="img"></div>
+                  <button class="more">Подробнее</button>
+              </div>
             </div>
         </div>
+
    </div>
 
 
