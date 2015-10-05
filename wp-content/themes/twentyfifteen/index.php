@@ -108,7 +108,7 @@ get_header(); ?>
 
 
   <div class="container">
-        <div class="row text-center">
+        <div class="row text-center button_tour">
             <button class="btn">Заказать подбор тура!</button>
         </div>
   </div>

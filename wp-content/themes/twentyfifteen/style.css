@@ -270,9 +270,9 @@ div.wpcf7 {
 }
 
 .item_tour span.dates, .item_tour span.price  {
-	margin-top: 5px;
-	line-height: 40px;
+	line-height: 20px;
 	height: 20px;
+
 	background: url(img/tour_icons/date.svg) -10px center  no-repeat;
 	background-size: 65px auto ;
 	color:  #414141;
@@ -280,7 +280,7 @@ div.wpcf7 {
 }
 
 .item_tour span.price  {
-	background: url(img/tour_icons/price.svg) -10px center  no-repeat;
+	background: url(img/tour_icons/price.svg) -10px center no-repeat;
 	background-size: 65px auto ;
 }
 
@@ -328,7 +328,10 @@ div.wpcf7-validation-errors {
     font-size: 24px;
 }
 
-
+#burn_tours .button_tour {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
 
 /*Карта мира*/
 #world_map {
