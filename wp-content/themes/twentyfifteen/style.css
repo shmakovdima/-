@@ -205,6 +205,8 @@ div.wpcf7 {
 	min-width: 100%;
 }
 
+/*туры*/
+
 .item_tour {
 	overflow: hidden;
 	min-height: 50px;
@@ -245,6 +247,50 @@ div.wpcf7 {
 	background-color: #6CC4FD ;
 }
 
+.item_tour span {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	position: relative;
+	display: block;
+	padding-left: 0px;
+	font-size: 18px;
+	color:  #515151;
+	padding-left: 45px;
+}
+
+.item_tour span.place {
+	margin-top: 10px;
+	line-height: 30px;
+	height: 30px;
+	width: 100%;
+	position: relative;
+	background: url(img/tour_icons/localization.svg) -10px center  no-repeat;
+	background-size: 65px auto ;
+}
+
+.item_tour span.dates, .item_tour span.price  {
+	margin-top: 5px;
+	line-height: 40px;
+	height: 20px;
+	background: url(img/tour_icons/date.svg) -10px center  no-repeat;
+	background-size: 65px auto ;
+	color:  #414141;
+	font-size: 16px;
+}
+
+.item_tour span.price  {
+	background: url(img/tour_icons/price.svg) -10px center  no-repeat;
+	background-size: 65px auto ;
+}
+
+.item_tour span.place span {
+	font-weight: bold;
+	color: #515151;
+	width: auto;
+	display: inline;
+	padding-left: 0px;
+}
 
 .item_tour button span {
 	font-size: 27px;
@@ -254,14 +300,13 @@ div.wpcf7 {
 	background: red;
 	width: 100%;
 	height: 164px;
-
 }
 
 div.wpcf7-validation-errors {
 	display: none!important;
 }
 
-/*туры*/
+
 
 /*Горячие туры*/
 

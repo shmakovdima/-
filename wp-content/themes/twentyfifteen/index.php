@@ -66,10 +66,20 @@ get_header(); ?>
    <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
+
+              
+                 <?php $posts = get_posts("category_name=hot_tours&orderby=date&post_status=publish"); ?>
+                <?php if ($posts) : ?>
+                <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+
+
+                   <?php endforeach; ?>
+                  <?php endif; ?> 
+
               <div class="item_tour">
                   <div class="img"></div>
                   <span class="place"><span>Рим</span>, Италия</span>
-                  <span class="dates"></span>
+                  <span class="dates">13.07 -23.07</span>
                   <span class="price"></span>
                   <button class="more">Подробнее</button>
               </div>
