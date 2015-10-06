@@ -1,6 +1,77 @@
-@import "http://webfonts.ru/import/osans.css";
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+*/
 
-/*boootsrap 15 colums*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+
+}
+
+
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next, .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* just for demo purpose */
+
+
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+
+
+
+
+.carousel-inner {
+	background-image: none;
+
+}
 
 section {
 	visibility: hidden;
@@ -38,27 +109,42 @@ section {
         float: left;
     }
 }
+#top_tours .row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
 
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+	opacity: 0.6;
+}
 
-
+#main {
+	overflow-x: hidden;
+}
+html {
+	
+}
 html, body {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 	background: rgb(255, 255, 255);
 	padding: 0px;
 	margin: 0px;
+
 }
 
 a {
 	color: white;
-	transition: 200ms all linear;
+	transition: 200ms all ease-out;
 }
 
 a:hover {
 
 }
 
+
 span {
-	font-family: "OpenSans";
+	font-family: 'Open Sans', sans-serif;
 	color:  #fdfdfd;
 	font-size: 14px;/* Приближение из-за подстановки шрифтов */
 	font-weight: 400;
@@ -71,6 +157,39 @@ span {
 	text-align: center;
 
 }
+
+h1 {
+	color:  #ffffff;
+	font-size: 50px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 600;
+		margin-left: -15px;
+	line-height: 55px;/* Приближение из-за подстановки шрифтов */
+	text-align: left;
+	text-shadow: 1px 2px 14px rgba(0, 0, 0, 0.28);
+	width: 600px;
+	margin-top: 40px;
+}
+
+.slider_status span {
+	margin-top: 20px;
+	max-width: 420px;
+	margin-left: -15px;
+	display: block;
+	font-size: 20px;/* Приближение из-за подстановки шрифтов */
+	font-weight: 400;
+	line-height: 24px;/* Приближение из-за подстановки шрифтов */
+	text-align: left;
+	text-shadow: 1px 2px 14px rgba(0, 0, 0, 0.47);
+}
+#slider .carousel-indicators {
+	text-align: left;
+	margin-left: 0px;
+	left: 15px;
+	bottom: 130px;
+	position: relative;
+}
+
+
 h2 {
 	display: inline;
 	position: relative;
@@ -123,7 +242,7 @@ h2.white {
 	border: none;
 	color:  rgba(255, 255, 255, 1);
 	box-shadow: 1px 1px 0px 0px #7b923d!important;
-	transition: 400ms all linear;
+	transition: 400ms all ease-out;
 }
 
 
@@ -146,28 +265,29 @@ h2.white {
 .form-control {
 	background-color:  transparent;
 	color: white;
+	height: 40px;
 	border: 1px solid white;
 	border-radius: 3px;
-	transition: 200ms all linear;
+	transition: 200ms all ease-out;
 }
 
 .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
-    font-family: "OpenSans";
+    font-family: 'Open Sans', sans-serif;
 }
 .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color: white;
    opacity:  1;
-    font-family: "OpenSans";
+    font-family: 'Open Sans', sans-serif;
 }
 .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
    color: white;
    opacity:  1;
-    font-family: "OpenSans";
+    font-family: 'Open Sans', sans-serif;
 }
 .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: white;
-    font-family: "OpenSans";
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wpcf7-not-valid-tip {
@@ -175,7 +295,8 @@ h2.white {
 }
 
 .form-control.wpcf7-not-valid, .form-control.wpcf7-not-valid:hover {
-	background: #ff125b;
+
+	 background:rgba(255, 18, 91,1);
 }
 
 .ajax-loader {
@@ -204,6 +325,50 @@ div.wpcf7 {
 	font-size: 17px;
 	min-width: 100%;
 }
+#introduction {
+	background-color:  #f9f9f9;
+}
+
+/*slider*/
+
+#slider {
+	height: 100vh;
+	height: calc(100vh + 12px);
+	width: 100%;
+}
+
+#slider .item {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.slider_text {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	max-width: 100%;
+	overflow-x:hidden;
+}
+
+#slider .order__form {
+	
+}
+
+.slider_row {
+	margin-top: 17%;
+	margin-top: calc(50vh - 168px);
+}
+
+#after_slider {
+	    z-index: 10000;
+	margin-top: -70px;
+	height: auto;
+	margin-bottom: 50px;
+}
 
 /*туры*/
 
@@ -213,6 +378,11 @@ div.wpcf7 {
 	background-color:  #ffffff;
 	border-radius: 5px;
 	box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.18);
+	margin-bottom: 40px;
+}
+
+.topped {
+	top: -25px;
 }
 
 .item_tour button {
@@ -254,41 +424,49 @@ div.wpcf7 {
 	position: relative;
 	display: block;
 	padding-left: 0px;
+	margin-left: 0px;
 	font-size: 18px;
 	color:  #515151;
-	padding-left: 45px;
+	padding-left: 38px;
 }
 
 .item_tour span.place {
 	margin-top: 10px;
 	line-height: 30px;
-	height: 30px;
+	height: 40px;
+	line-height: 40px;
 	width: 100%;
 	position: relative;
 	background: url(img/tour_icons/localization.svg) -10px center  no-repeat;
-	background-size: 65px auto ;
+	background-size: 55px auto ;
 }
 
 .item_tour span.dates, .item_tour span.price  {
-	line-height: 20px;
-	height: 20px;
+	line-height: 30px;
+	height: 30px;
 
 	background: url(img/tour_icons/date.svg) -10px center  no-repeat;
-	background-size: 65px auto ;
+	background-size: 55px auto ;
 	color:  #414141;
+
 	font-size: 16px;
 }
 
 .item_tour span.price  {
 	background: url(img/tour_icons/price.svg) -10px center no-repeat;
-	background-size: 65px auto ;
+	background-size: 55px auto ;
+		color:  #88c223;
+	margin-bottom: 5px;
+	
+	
 }
 
 .item_tour span.place span {
-	font-weight: bold;
+	font-weight: 600;
 	color: #515151;
 	width: auto;
 	display: inline;
+	margin-left: 0px;
 	padding-left: 0px;
 }
 
@@ -300,12 +478,13 @@ div.wpcf7 {
 	background: red;
 	width: 100%;
 	height: 164px;
+	background-position: center;
+	background-size: cover;
 }
 
 div.wpcf7-validation-errors {
 	display: none!important;
 }
-
 
 
 /*Горячие туры*/
@@ -315,22 +494,22 @@ div.wpcf7-validation-errors {
 	background-size: auto 140%;
 }
 
-#burn_tours .h2__wrap span {
+#burn_tours .h2__wrap span, #top_tours .h2__wrap span {
 	position: absolute;
     width: 140px;
     left: 50%;
-    font-family: "OpenSans";
+    font-family: 'Open Sans', sans-serif;
     top: 60px;
     margin-left: -70px;
     text-align: center;
     line-height: 30px;
     color: rgba(90, 90, 90, 0.6);
-    font-size: 24px;
+    font-size: 22px;
 }
 
 #burn_tours .button_tour {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 10px;
+	margin-bottom: 70px;
 }
 
 /*Карта мира*/
@@ -352,7 +531,7 @@ div.wpcf7-validation-errors {
 }
 
 #world_map div {
-	padding: 0px;
+	
 }
 
 #world_map div div {
@@ -361,12 +540,13 @@ div.wpcf7-validation-errors {
 
 #world_map span {
 	line-height: 17px;
-	font-family: "OpenSans";
+	font-family: 'Open Sans', sans-serif;
 	color:  #515151;
 	font-size: 15px;/* Приближение из-за подстановки шрифтов */
 	font-weight: 400;
 	height: 15px;
 	display: block;
+	left: 0px;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
@@ -409,7 +589,7 @@ div.wpcf7-validation-errors {
 
 #work_scheme {
 	height: 695px ;
-	background: url(img/work_scheme.png) center no-repeat;
+	background: url(img/work_scheme.png) bottom center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -420,7 +600,7 @@ div.wpcf7-validation-errors {
 
 #work_scheme .h2__wrap span {
 	top: -50px;
-	font-family: "OpenSans";
+	font-family: 'Open Sans', sans-serif;
 	display: inline-block;
 	padding: 10px 15px;
 	max-width: 550px;
@@ -551,10 +731,10 @@ div.wpcf7-validation-errors {
 	  color: #222;
 	  font-size: 2.3em;
 	  text-shadow: none;
-	  transition: 300ms all linear;
+	  transition: 300ms all ease-out;
 }
 /* Previous button  */
-#quote-carousel .carousel-control.left 
+#quote-carousel .carousel-control.left, .carousel-control.left  
 {
   background: url("img/slider_arrow_right.svg") center center no-repeat;
   background-size: 46px 46px  ;
@@ -563,17 +743,59 @@ div.wpcf7-validation-errors {
   transform: rotate(180deg);
 }
 /* Next button  */
-#quote-carousel .carousel-control.right 
+#quote-carousel .carousel-control.right , .carousel-control.right 
 {
   background: url("img/slider_arrow_right.svg") center center no-repeat;
   background-size: 46px 46px  ;
   right: -12px !important;
 }
 
-#quote-carousel .carousel-control.left:hover {
+#top_tours .carousel-control.right {
+	right: -110px !important;
+	top: -90px;
+ }
+
+#top_tours .carousel-control.left {
+	left: -110px !important;
+	top: -90px;
+}
+
+ #slider .carousel-control.left { 
+ 		left: -50px !important;
+ }
+
+ #slider .carousel-control.right { 
+ 		right: -50px !important;
+ }
+
+.carousel-control.left:hover, .carousel-control.right:hover {
 	fill: #b0b0b0;
 	color: #b0b0b0;
+	opacity: 1;
 }
+
+
+#slider  .carousel-control.left, .carousel-control.left  
+{
+  background: url("img/slider_arrow_right_white.svg") center center no-repeat;
+  background-size: 46px 46px  ;
+   opacity: 0.6;
+  transform: rotate(180deg);
+}
+/* Next button  */
+
+#slider  .carousel-control.right , .carousel-control.right 
+{
+   opacity: 0.6;
+  background: url("img/slider_arrow_right_white.svg") center center no-repeat;
+  background-size: 46px 46px  ;
+
+}
+ #slider a.carousel-control.left:hover, #slider a.carousel-control.right:hover{
+	opacity: 1;	
+}
+
+
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
 {
@@ -583,21 +805,39 @@ div.wpcf7-validation-errors {
   bottom: 0px;
   margin-right: -19px;
 }
+
+.carousel-indicators li {
+	margin: 0px;
+	transition: 300ms all ease-out;
+	border: none;
+	 width: 10px;
+  height: 10px;
+	background-color:  rgba(255, 255, 255, 0.4);
+}
+
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li 
 {
- transition: 300ms all linear;
   margin: 0px;
-  width: 10px;
-  height: 10px;
+ 
   background: rgb(237, 237, 237);
 }
+
+.carousel-indicators .active {
+
+	background: white;
+	border: none;
+	width: 10px;
+  height: 10px;
+}
+
 #quote-carousel .carousel-indicators .active 
 {
-width: 10px;
-  height: 10px;
+
   background: rgb(169, 169, 169);
 }
+
+
 #quote-carousel img
 {
   width: 100px;
@@ -620,7 +860,7 @@ width: 10px;
 #quote-carousel p {
 	background-color:  #12a3ff;
 	padding: 20px;
-	font-family: "OpenSans";
+	font-family: 'Open Sans', sans-serif;
 	border-radius: 5px;
 	color:  #ffffff;
 	font-size: 17px;/* Приближение из-за подстановки шрифтов */
@@ -639,7 +879,7 @@ width: 10px;
 }
 
 #quote-carousel blockquote small {
-	font-family: "OpenSans";
+	font-family: 'Open Sans', sans-serif;
 	color:  #5a5a5a;
 	font-size: 15px
 }
@@ -647,6 +887,46 @@ width: 10px;
 small:before {
 	display: none;
 }
+
+
+/*Топ туры*/
+
+#top_tours {
+	    height: 695px;
+	background: url(img/top_tours.png) center no-repeat;
+	background-size: cover;
+
+}
+
+#top_tours .h2__wrap span {
+	color:  rgba(255, 255, 255, 0.9);
+	font-size: 22px;
+}
+
+#top_tours h2  {
+	background: url(img/top-tours.svg) left no-repeat;
+	background-size: auto 140%;
+}
+
+#top_tours .carousel-indicators{
+	position: relative;
+	margin-top: 15px;
+}
+
+#top_tours .item_tour {
+	padding-bottom: 10px;
+}
+
+#top_tours .item_tour span {
+	background-size: 50px!important;
+	background-position: -5px center;
+}
+
+#top_tours button {
+	margin-top: 15px;
+}
+
+
 
 
 /*Контакты*/
@@ -665,7 +945,7 @@ small:before {
 .contact__placemark {
 	
 	border-radius: 5px;
-	max-width: 180px;
+	max-width: 190px;
 	padding-bottom: 18px;
 	float: right;
 	
@@ -757,10 +1037,15 @@ span.contact__adress, .contact__positioned__small span.contact__adress {
 
 
 footer {
+
 	position: relative;
 	width: 100%;
 	float: left;
 	background-color:  #203e51;
+}
+
+footer .container {
+	margin-bottom: 3px;
 }
 
 footer div div div {
@@ -812,6 +1097,89 @@ footer span a + a {
 
 @media (max-width: 768px) { 
 
+	h1 { 
+		text-align: center;
+		padding-top: 40px;
+		padding-right: 0px!important;
+		margin: 0 auto;
+	}
+
+	#slider .carousel-control  {
+		display: none;
+	}
+
+	#slider .text-right {
+		overflow: hidden;
+		margin-top: 40px;
+	}
+
+	#after_slider {
+		display: none;
+	}
+
+	.slider_status span {
+		position: relative;
+		text-align: center;
+		padding-bottom: 20px;
+		width: 100%;
+		margin-left: 0px;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		display: block;
+
+	}
+
+	#slider .carousel-indicators {
+		bottom: 50px;
+		left: 50%;
+		    margin-left: -30%;
+		    text-align: center;
+	}
+
+	.slider_text {
+		height: auto;
+		position: relative;
+	}
+
+	#slider {
+		height: auto;
+		overflow: hidden;
+	}
+
+	#slider .carousel {
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		width: 100%;
+		min-height: 752px;
+		position: absolute;
+	}
+
+	.slider_row {
+		margin-top: 50px;
+	}
+
+	.button_tour {
+		margin-bottom: 50px;
+	}
+
+	#top_tours .carousel-control.right {
+		right: 0px !important;
+		top: -90px;
+	 }
+
+	#top_tours .carousel-control.left {
+		left: 0px !important;
+		top: -90px;
+	}
+
+
+	#burn_tours .h2__wrap span, 	#top_tours .h2__wrap span  {
+		top: 45px;
+	}
+
+
 	.contact__positioned {
 		display: none;
 	}
@@ -855,7 +1223,7 @@ footer span a + a {
 		top: -30px;
 	}
 
-	#work_scheme {
+	#work_scheme, #top_tours {
 		height: auto!important;
 	}
 
@@ -876,6 +1244,8 @@ footer span a + a {
 		left: -6px!important;
 	}
 
+
+
 	/*Отзывы*/
 
 	 #quote-carousel .carousel-indicators {
@@ -893,7 +1263,7 @@ footer span a + a {
         height: 15px;
     }
 
-    #work_scheme {
+    #work_scheme, #top_tours {
     	height: auto;
     }
 
@@ -927,7 +1297,28 @@ footer span a + a {
 
 }
 
+@media (max-width: 1200px) { 
+
+	h1 {
+		min-width: 0px;
+		width: 100%;
+		font-size: 40px;
+		padding-right: 30px;
+	}
+
+	.slider_status span {
+		margin-top: 10px;
+	}
+}
+
 @media (max-width: 992px) { 
+
+
+	
+	#top_tours {
+		background-size: cover;
+		background-attachment: scroll;
+	}
 
 	.item_tour div.img {
 		height: 215.5px;
@@ -938,7 +1329,7 @@ footer span a + a {
 		top: 185px;
 	}
 
-	#work_scheme {
+	#work_scheme, #top_tours {
 		height: 630px;
 	}
 
@@ -1000,6 +1391,17 @@ footer span a + a {
 }
 
 @media (max-width: 1200px) and (min-width: 992px) { 
+
+	#top_tours .carousel-control.right {
+		right: -90px !important;
+		top: -90px;
+	 }
+
+	#top_tours .carousel-control.left {
+		left: -90px !important;
+		top: -90px;
+	}
+
 	.item_tour div.img {
 		height: 133px;
 	}

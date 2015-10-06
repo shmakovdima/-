@@ -1,11 +1,11 @@
 
 
 
-// When the DOM is ready, run this function
+// When the DOM is ready, run this function , #top-carousel
 $(window).load(function() {
 	new WOW().init();
   //Set the carousel options
-  $('#quote-carousel').carousel({
+  $('#quote-carousel, #Carousel, .carousel').carousel({
     pause: true,
     interval: 5000,
   });

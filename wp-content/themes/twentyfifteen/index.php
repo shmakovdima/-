@@ -17,10 +17,147 @@
 
 get_header(); ?>
 
+<div id="main">
+<section id="introduction" class="wow fadeIn animated" data-wow-duration="1s">
 
-<section id="introduction" class="wow fadeIn animated">
+    <section id="slider" class="wow fadeIn animated" data-wow-duration="1s">
+          <div id="carousel_main" class="carousel slide carousel-fade" data-ride="carousel_main">
+               
+            
+              <div class="carousel-inner">
+               
+
+                     <?php $counter = 0; ?>
+           <?php $posts = get_posts("category_name=slider&numberposts=6&orderby=date&order=ASC&post_status=publish"); ?>
+          <?php if ($posts) : ?>
+          <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+            <?php 
+              if ($counter==0) {
+                echo '  <div class="item active" style="background-image: url('.wp_get_attachment_url( get_post_thumbnail_id($post->ID)).')">';
+              }else{
+                echo ' <div class="item" style="background-image: url('.wp_get_attachment_url( get_post_thumbnail_id($post->ID)).')">';
+              }
+               $counter++;
+            ?>
+            
+                </div>
+             <?php endforeach; ?>
+              <?php endif; ?>
+                  
+              <div class="container">
+
+                <div class="row "> 
+
+                                       <ol class="carousel-indicators text-left">
+                <?php $counter = 0;  ?>
+                <?php $posts = get_posts("category_name=slider&numberposts=6&orderby=date&order=ASC&post_status=publish"); ?>
+                <?php if ($posts) : ?>
+                <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+                  <?php 
+                    if ($counter==0) {
+                      echo '<li data-target="#carousel_main" data-slide-to="'.$counter.'" class="active"></li>';
+                    }else{
+                      echo '<li data-target="#carousel_main" data-slide-to="'.$counter.'"></li>';
+                    }
+                    $counter++;
+                  ?>
+
+               
+                <?php endforeach; ?>
+                <?php endif; ?> 
+              </ol>
+              </div>
+              </div>
+
+              </div>
+             
+              
+          </div>
+          <div class="slider_text">
+            <div class="container slider_row">
+
+                <div class="row "> 
+                    <div class="col-sm-6  slider_status ">
+                        <div class="col-md-offset-1 col-md-11 col-lg-offset-0 col-lg-11">
+
+                        <?php $posts = get_posts("category_name=text_slider&numberposts=1&orderby=date&post_status=publish"); ?>
+              
+                        <?php if ($posts) : ?>
+                        <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+                        <h1><?php echo $post->post_content?></h1>
+                        <span><?php echo get_post_meta($post->ID, 'text_pod', true); ?></span>
+                        <?php endforeach; ?>
+                         <?php endif; ?>
+
+
+
+                         </div>
+
+
+
+                    </div>
+                     <div class="col-sm-6 text-right">
+                            <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1  col-sm-10 col-md-offset-4 col-md-7  col-lg-offset-5 col-lg-7 order__form">
+                                <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
+                                <span>Гарантируем конфиденциальность<br> 
+                                ваших данных</span>
+                            </div>
+                      </div>
+                </div>
+                  <a class="carousel-control left" href="#carousel_main" data-slide="prev"></a>
+              <a class="carousel-control right" href="#carousel_main" data-slide="next"></a>
+            </div>
+          </div>
+
+    </section>
+  
+  <section id="after_slider" class="wow fadeIn animated" data-wow-duration="1s">
+      <div class="container">
+        <div class="row">
+         <?php $counter = 0; ?>
+            <?php $posts = get_posts("category_name=tour_pod_slider&numberposts=4&orderby=date&post_status=publish"); ?>
+                <?php if ($posts) : ?>
+                <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+
+                      <?php 
+                      
+                          if  (in_array($counter, array(2,3))) {
+                            if ($counter==2) {
+                              echo '<div class="col-md-3 col-sm-6 hidden-xs hidden-sm topped"> ';
+                              
+                            }else{
+                              echo '<div class="col-md-3 col-sm-6 hidden-xs hidden-sm"> ';
+                            }
+                          }else{
+                              echo ' <div class="col-md-3 col-sm-6">';
+                          }
+
+                           $counter++;
+                      ?>
+
+
+                    
+                      <div class="item_tour">
+                          <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
+                          <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
+                          <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
+                          <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                          <button class="more">Подробнее</button>
+                      </div>
+                    </div>
+
+                   <?php endforeach; ?>
+                  <?php endif; ?> 
+           
+          
+        </div>
+
+   </div>
+
+    
+  </section>
 </section>
-<section id="world_map" class="wow fadeIn animated">
+<section id="world_map" class="wow fadeIn animated" data-wow-duration="1s">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-sm-12 col-xs-12 world_map__label">
@@ -55,9 +192,99 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
-<section id="top_tours" class="wow fadeIn animated">
+
+<section id="top_tours" class="wow fadeIn animated"  data-wow-duration="1s">
+    <div class="h2__wrap">
+      <span>Наши туры</span>
+      <br>
+      <h2 class="white">Топ-туры</h2>
+    
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="Carousel" class="carousel slide col-md-12 col-md-offset-0" >  
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+
+                <?php $counter = 0;  /*<!-- data-ride="carousel" id="top-carousel"*/?>
+                <?php $posts = get_posts("category_name=top_tours&numberposts=9&orderby=date&post_status=publish"); ?>
+              
+                <?php if ($posts) : ?>
+                <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+
+                  <?php if (($counter==0)) {
+                      echo '<div class="item active"><div class="row">';
+                  }else{
+                    if  (($counter % 3)==0) {
+                         echo '<div class="item "><div class="row">';
+                    }
+                  }
+                  ?>          
+
+                        <?php 
+                          if  (in_array($counter, array(0,3,6,9,12,15))) {
+                              echo '<div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2"> ';
+                          }
+
+                          if  (in_array($counter, array(1,4,7,10,13,16))) { 
+                              echo '<div class="col-md-4 col-sm-6 hidden-xs"> ';
+                          }
+
+                          if  (in_array($counter, array(2,5,8,11,14,17))) { 
+                              echo '<div class="col-md-4 col-sm-6 hidden-sm hidden-xs"> ';
+                          }
+
+                        ?>
+                            
+
+
+                            <div class="item_tour">
+                                <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
+                                <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
+                                <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
+                                <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                               
+                            </div>
+                            </div>
+                             <?php $counter++;?>
+                         <?php   if  (($counter % 3)==0) {
+                             echo '</div><!--.row--></div><!--.item-->';
+                          } ?>
+                        <?php endforeach; ?>
+                  <?php endif; ?> 
+                   
+                </div>
+                 <a data-slide="prev" href="#Carousel" class="left carousel-control"></a>
+                <a data-slide="next" href="#Carousel" class="right carousel-control"></a>
+
+                 <ol class="carousel-indicators">
+                    
+                     <?php $counter = 0; ?>
+          <?php $posts = get_posts("category_name=top_tours&numberposts=9&orderby=date&post_status=publish"); ?>
+          <?php if ($posts) : ?>
+          <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+            <?php 
+              if ($counter==0) {
+                echo ' <li data-target="#Carousel" data-slide-to="'.$counter.'" class="active"></li>';
+              }else{
+                 if  (($counter % 3)==0) {
+                     echo '<li data-target="#Carousel" data-slide-to="'.$counter.'"></li>';
+                  }
+              }
+              $counter++;
+            ?>
+             <?php endforeach; ?>
+              <?php endif; ?> 
+
+
+                </ol>
+        </div>
+          <div class="row text-center button_tour">
+            <button class="btn">Заказать подбор тура!</button>
+        </div>
+    </div>
 </section>
-<section id="burn_tours" class="wow fadeIn animated">
+<section id="burn_tours" class="wow fadeIn animated"  data-wow-duration="1s">
   <div class="h2__wrap">
       <span>Наши туры</span>
       <br>
@@ -65,43 +292,23 @@ get_header(); ?>
   </div>
    <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6">
-
-              
-                 <?php $posts = get_posts("category_name=hot_tours&orderby=date&post_status=publish"); ?>
+            <?php $posts = get_posts("category_name=hot_tours&numberposts=8&orderby=date&post_status=publish"); ?>
                 <?php if ($posts) : ?>
                 <?php foreach ($posts as $post) : setup_postdata ($post); ?>
-
+                     <div class="col-md-3 col-sm-6">
+                      <div class="item_tour">
+                          <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
+                          <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
+                          <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
+                          <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                          <button class="more">Подробнее</button>
+                      </div>
+                    </div>
 
                    <?php endforeach; ?>
                   <?php endif; ?> 
-
-              <div class="item_tour">
-                  <div class="img"></div>
-                  <span class="place"><span>Рим</span>, Италия</span>
-                  <span class="dates">13.07 -23.07</span>
-                  <span class="price"></span>
-                  <button class="more">Подробнее</button>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="item_tour">
-                  <div class="img"></div>
-                  <button class="more">Подробнее</button>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="item_tour">
-                  <div class="img"></div>
-                  <button class="more">Подробнее</button>
-              </div>
-            </div>
-             <div class="col-md-3 col-sm-6">
-              <div class="item_tour">
-                  <div class="img"></div>
-                  <button class="more">Подробнее</button>
-              </div>
-            </div>
+           
+          
         </div>
 
    </div>
@@ -114,7 +321,8 @@ get_header(); ?>
   </div>
 
 </section>
-<section id="work_scheme" class="wow fadeIn animated">
+
+<section id="work_scheme" class="wow fadeIn animated"  data-wow-duration="1s">
     <div class="h2__wrap">
       <h2 class="white">Схема работы</h2>
       <br>
@@ -151,7 +359,7 @@ get_header(); ?>
         </div>
       </div>
 </section>
-<section id="review" class="wow fadeIn animated">
+<section id="review" class="wow fadeIn animated"  data-wow-duration="1s">
 	<div class="h2__wrap">
 		<h2>Отзывы клиентов</h2>
 	</div>
@@ -220,7 +428,7 @@ get_header(); ?>
   		</div>
 	</div>
 </section>
-<section id="contact" class="wow fadeIn animated">
+<section id="contact" class="wow fadeIn animated"  data-wow-duration="1s">
   <div class="h2__wrap">
     <h2>Наши контакты</h2>
   </div>
@@ -253,7 +461,7 @@ get_header(); ?>
             </div>
              
            <div class="col-sm-6">
-                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10 col-md-7 col-md-offset-2 col-lg-6 order__form">
+                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10 col-md-7 col-md-offset-2 col-lg-7 order__form">
                     <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                     <span>Гарантируем конфиденциальность<br> 
                     ваших данных</span>
@@ -262,6 +470,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
+</div>
 
 <?php get_footer(); ?>
