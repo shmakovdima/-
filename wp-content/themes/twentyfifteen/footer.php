@@ -41,10 +41,54 @@
     <!-- Modal content-->
    
       <div class="modal-body">
-        			<div class="row">
-		                <div class="col-md-6 col-md-offset-3">
+        	<div class="row">
+		        <div class="col-md-6 col-md-offset-3">
+		        		 <div id="Carousel" class="carousel slide col-md-12 col-md-offset-0" >  
+                <!-- Carousel items -->
+                <div class="carousel-inner">
 
-        				</div>
+                <?php $counter = 0;  /*<!-- data-ride="carousel" id="top-carousel"*/?>
+                <?php $posts = get_posts("category_name=top_tours&numberposts=9&orderby=date&post_status=publish"); ?>
+              
+                <?php if ($posts) : ?>
+                <?php foreach ($posts as $post) : setup_postdata ($post); ?>
+
+                  <?php if (($counter==0)) {
+                      echo '<div class="item active"><div class="row">';
+                  }else{
+                    
+                         echo '<div class="item "><div class="row">';
+                   
+                  }
+                  ?>          
+
+                        
+                             <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                          }
+
+
+
+                            <div class="item_tour">
+                                <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
+                                <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
+                                <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
+                                <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                               
+                            </div>
+                            </div>
+                          
+                         
+                            </div><!--.row--></div><!--.item-->';
+                         
+                        <?php endforeach; ?>
+                  <?php endif; ?> 
+                   
+                </div>
+                 <a data-slide="prev" href="#Carousel" class="left carousel-control"></a>
+                <a data-slide="next" href="#Carousel" class="right carousel-control"></a>
+
+        </div>
+        		</div>
         	</div>
      
     </div>

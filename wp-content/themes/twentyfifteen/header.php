@@ -24,7 +24,7 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-<div id="main">
+
 <header>
 	<section id="footer_first">
 	<div class="container">
@@ -48,6 +48,7 @@
 			</div>
 		</div>
 	</div>
+
 	</section>
 	<section id="footer_second" >
 	<div class="container">
@@ -63,9 +64,6 @@
      		</button>
 			
 		</div>
-		
-		
-		
 		<ul class="nav nav-header navbar-nav navbar-right navbar-collapse collapse" id="myNavbar">
 			<li>
 				<a href="#top_tours" data-scroll-nav="1" class="active">Топ-туры</a>
@@ -88,6 +86,7 @@
 		</div>
 	</section>
 </header>
+<div id="main">
 <body <?php body_class(); ?>>
 
 
