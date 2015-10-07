@@ -28,7 +28,31 @@
 				</div>
 			</div>
 		</div>
-	</footer><!-- .site-footer -->
+	</footer>
+	<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   
+      <div class="modal-body">
+      		
+        			<div class="row">
+        	
+		                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-2 col-sm-8 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 order__form">
+		                    <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
+		                    <span>Гарантируем конфиденциальность<br> 
+		                    ваших данных</span>
+		                    <button type="button" class="close" data-dismiss="modal"></button>
+		                </div>
+         			 </div>
+        			
+        		
+        	</div>
+     
+    </div>
+
+  </div>
+</div>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.min.js"></script>

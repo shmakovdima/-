@@ -96,7 +96,7 @@ get_header(); ?>
 
                     </div>
                      <div class="col-sm-6 text-right">
-                            <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1  col-sm-10 col-md-offset-4 col-md-7  col-lg-offset-5 col-lg-7 order__form">
+                            <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1  col-sm-10 col-md-offset-4 col-md-8  col-lg-offset-5 col-lg-7 order__form">
                                 <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                                 <span>Гарантируем конфиденциальность<br> 
                                 ваших данных</span>
@@ -276,7 +276,7 @@ get_header(); ?>
                 </ol>
         </div>
           <div class="row text-center button_tour">
-            <button class="btn">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
         </div>
     </div>
 </section>
@@ -312,7 +312,7 @@ get_header(); ?>
 
   <div class="container">
         <div class="row text-center button_tour">
-            <button class="btn">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
         </div>
   </div>
 
@@ -351,7 +351,7 @@ get_header(); ?>
     </div>
       <div class="container">
         <div class="row text-center work_scheme__button">
-            <button class="btn">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
         </div>
       </div>
 </section>
@@ -457,7 +457,7 @@ get_header(); ?>
             </div>
              
            <div class="col-sm-6">
-                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10 col-md-7 col-md-offset-2 col-lg-7 order__form">
+                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg-7 order__form">
                     <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                     <span>Гарантируем конфиденциальность<br> 
                     ваших данных</span>

@@ -152,7 +152,23 @@ a:active, a:focus,  a.active, a:visited {
 	text-transform: none;
 }
 
+.close {
+	position: absolute;
+	top: -45px;
+	right: -45px;
+	height: 30px;
+	width: 30px;
+	opacity: 0.6;
+	display: block;
+	background: url(img/close.svg) center no-repeat!important;
+	background-size: 30px 30px!important;
+	transition: 400ms all linear;
+	text-shadow: none;
+}
 
+.close:hover, .close:active {
+	opacity: 1;
+}
 
 span {
 	font-family: 'Open Sans', sans-serif;
@@ -483,6 +499,7 @@ div.wpcf7 {
 }
 
 #slider .item {
+	background-color: blue;
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -665,7 +682,7 @@ div.wpcf7-validation-errors {
 /*Карта мира*/
 #world_map {
 	
-	padding-top: 60px;
+	padding-top: 45px;
 	height: 300px;
 }
 
@@ -1073,15 +1090,13 @@ small:before {
 	margin-top: 15px;
 }
 
-
-
-
 /*Контакты*/
 
 #contact {
-	height: 610px;
+	height: 670px;
 	background: url(img/contact.png) center bottom no-repeat;
 	background-size: contain;
+
 }
 
 #contact h2  {
@@ -1243,6 +1258,10 @@ footer span a + a {
 }
 
 @media (max-width: 768px) { 
+
+	#world_map h2 {
+		margin-top: 40px;
+	}
 
 	h1 { 
 		text-align: center;
@@ -1479,7 +1498,11 @@ footer span a + a {
 	}
 
 	#work_scheme, #top_tours {
-		height: 630px;
+		height: 780px;
+	}
+
+	#work_scheme {
+		height: 680px;
 	}
 
 	#quote-carousel .carousel-control {
@@ -1571,4 +1594,59 @@ footer span a + a {
 		right: 150px;
 		top: 55px;
 	}
+}
+
+
+@media(max-width:1000px)  {
+
+	.menu_displayed {
+		display: none;
+	}
+
+	.navbar-header {
+		width: 100%;
+	}
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        overflow-x: visible !important;
+    }
+
+    .navbar-collapse.in {
+      overflow-y: auto !important;
+    }
+
+    .collapse.in {
+      display: block !important;
+    }
+    .navbar-toggle {
+    	display: block;
+    	line-height: 80px;
+    	margin-top: 10px;
+    	cursor: pointer;
+    	    top: 12px;
+    	background-color: rgba(255,255,255,0.6);
+    }
+
+    .navbar-toggle .icon-bar {
+    	background: white;
+    }
+    ul.navbar-right {
+    	width: 100%;
+    	    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    ul.navbar-right li {
+    	width: 100%;
+   		text-align: center;
+    }
+
+    ul.navbar-right li+li {
+    	margin-left: 0px;
+    }
+
+
 }

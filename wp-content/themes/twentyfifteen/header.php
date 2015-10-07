@@ -32,7 +32,7 @@
 			<div class="col-xs-6 text-left">
 				<span class="header_phones">
 					<a title="Наш телефон" href="tel:+375 (29) 684-43-54">+375 (29) 684-43-54;</a>
-					<a title="Наш телефон" href="tel:+375 (29) 444-52-23">+375 (29) 444-52-23;</a>
+					<a title="Наш телефон" class="menu_displayed" href="tel:+375 (29) 444-52-23">+375 (29) 444-52-23;</a>
 				</span>
 			</div>
 			<div class="col-xs-6 text-right">
@@ -41,7 +41,7 @@
 						<a href="https://youtube.com/test" title="Мы в Youtube" ><i class="fa fa-youtube"></i></a>
 						<a href="https://fb.com/test" title="Мы в Facebook" ><i class="fa fa-facebook"></i></a>
 						<a href="https://vk.com/test" title="Мы в ВКонтакте" ><i class="fa fa-vk"></i></a>
-						<span>следите за нами:</span>
+						<span class="menu_displayed">следите за нами:</span>
 				</span>
 
 
@@ -49,22 +49,24 @@
 		</div>
 	</div>
 	</section>
-	<section id="footer_second" >
+	<section id="footer_second navbar navbar-inverse" >
 	<div class="container">
 		<div class="row">
 		<div class="navbar-header">
 			<a class="navbar-brand" data-scroll-nav="0" href="#introduction">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo_white.svg" alt="Logo">
 			</a>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	              <span class="sr-only">Toggle navigation</span>
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	          </button>
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+     		</button>
+			
 		</div>
 		
-		<ul class="nav nav-header navbar-nav navbar-right navbar-collapse collapse">
+		
+		
+		<ul class="nav nav-header navbar-nav navbar-right navbar-collapse collapse" id="myNavbar">
 			<li>
 				<a href="#top_tours" data-scroll-nav="1" class="active">Топ-туры</a>
 			</li>
@@ -81,6 +83,7 @@
 				<a href="#contact" data-scroll-nav="5">Контакты</a>
 			</li>
 		</ul>
+			
 			</div>
 		</div>
 	</section>
