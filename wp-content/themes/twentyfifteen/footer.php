@@ -10,26 +10,7 @@
  */
 ?>
 
-
-	<footer role="contentinfo" class="wow fadeIn animated" >
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<span>2015 Copyright VeroGusto Travel</span>
-				</div>
-				<div class="col-sm-4 footer__logo"></div>
-				<div class="col-sm-4">
-					<span>
-						<a href="https://vk.com/test" title="Мы в ВКонтакте" ><i class="fa fa-vk"></i></a>
-						<a href="https://fb.com/test" title="Мы в Facebook" ><i class="fa fa-facebook"></i></a>
-						<a href="https://youtube.com/test" title="Мы в Youtube" ><i class="fa fa-youtube"></i></a>
-						<a href="https://instagram.com/test" title="Мы в Instagram" ><i class="fa fa-instagram"></i></a>
-					</span>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -53,6 +34,43 @@
 
   </div>
 </div>
+
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   
+      <div class="modal-body">
+        			<div class="row">
+		                <div class="col-md-6 col-md-offset-3">
+
+        				</div>
+        	</div>
+     
+    </div>
+
+  </div>
+</div>
+	<footer role="contentinfo" class="wow fadeIn animated" >
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<span>2015 Copyright VeroGusto Travel</span>
+				</div>
+				<div class="col-sm-4 footer__logo"></div>
+				<div class="col-sm-4">
+					<span>
+						<a href="https://vk.com/test" title="Мы в ВКонтакте" ><i class="fa fa-vk"></i></a>
+						<a href="https://fb.com/test" title="Мы в Facebook" ><i class="fa fa-facebook"></i></a>
+						<a href="https://youtube.com/test" title="Мы в Youtube" ><i class="fa fa-youtube"></i></a>
+						<a href="https://instagram.com/test" title="Мы в Instagram" ><i class="fa fa-instagram"></i></a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.min.js"></script>

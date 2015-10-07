@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	</section>
-	<section id="footer_second navbar navbar-inverse" >
+	<section id="footer_second" >
 	<div class="container">
 		<div class="row">
 		<div class="navbar-header">

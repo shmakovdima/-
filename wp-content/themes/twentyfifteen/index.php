@@ -138,7 +138,7 @@ get_header(); ?>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more">Подробнее</button>
+                          <button class="more" data-toggle="modal" data-target="#myModal2">Подробнее</button>
                       </div>
                     </div>
 
@@ -149,8 +149,6 @@ get_header(); ?>
         </div>
 
    </div>
-
-    
   </section>
 </section>
 <section id="world_map" class="wow fadeIn animated" data-wow-duration="1s">
@@ -297,7 +295,7 @@ get_header(); ?>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more">Подробнее</button>
+                          <button class="more" data-toggle="modal" data-target="#myModal2">Подробнее</button>
                       </div>
                     </div>
 

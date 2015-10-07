@@ -1,0 +1,77 @@
+Такси - вечер
+
+1) пнуть джуна - тему с гитом
+2) модалки для белоруссов + чекнуть мобильку
+3) отдать им на разработку дизайна - 150$
+4) у Бородича отдать старый домен
+
+	
+.Прямоугольник__скругл__углы_9 {
+border-width: 2px;
+border-color: rgb(18, 163, 255);
+border-style: solid;
+border-radius: 10px;
+position: absolute;
+left: 1368px;
+top: 3700px;
+width: 508px;
+height: 80px;
+z-index: 337;
+}
+.Заказать_подбор_тура_ {
+font-size: 36px;
+font-family: "OpenSans";
+color: rgba(255, 255, 255, 0.902);
+line-height: 0.556;
+text-shadow: 0px 3px 0px rgba(120, 146, 56, 0.75);
+position: absolute;
+left: 1409.78px;
+top: 4194.798px;
+z-index: 326;
+}
+.Прямоугольник__скругл__углы_9_копия_4 {
+border-radius: 10px;
+background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+box-shadow: 0px 5px 0px 0px rgba(123, 146, 61, 0.004);
+position: absolute;
+left: 1368px;
+top: 4136px;
+width: 512px;
+height: 101px;
+z-index: 324;
+}
+.Евгений {
+font-size: 28px;
+font-family: "OpenSans";
+color: rgb(84, 84, 84);
+line-height: 0.714;
+position: absolute;
+left: 1406.937px;
+top: 3731.504px;
+z-index: 338;
+}
+.Количество_человек {
+font-size: 28px;
+font-family: "OpenSans";
+color: rgba(255, 255, 255, 0.4);
+line-height: 0.714;
+position: absolute;
+left: 1406.937px;
+top: 4044.004px;
+z-index: 333;
+}
+.Прямоугольник__скругл__углы_9_копия_5 {
+border-width: 2px;
+border-color: rgb(255, 255, 255);
+border-style: solid;
+border-radius: 10px;
+opacity: 0.4;
+position: absolute;
+left: 1368px;
+top: 4012px;
+width: 508px;
+height: 80px;
+z-index: 332;
+}

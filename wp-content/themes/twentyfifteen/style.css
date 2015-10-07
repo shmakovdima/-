@@ -162,8 +162,10 @@ a:active, a:focus,  a.active, a:visited {
 	display: block;
 	background: url(img/close.svg) center no-repeat!important;
 	background-size: 30px 30px!important;
-	transition: 400ms all linear;
+	transition: 200ms all linear;
 	text-shadow: none;
+	border: none!important;
+	outline: none;
 }
 
 .close:hover, .close:active {

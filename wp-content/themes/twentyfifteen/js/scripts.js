@@ -12,7 +12,7 @@
 
 
 	jQuery(function(){
-	    jQuery(".contact_phone").mask("+375 (99) (99) (99) (99)");
+	    jQuery(".contact_phone").mask("375 (99) (99) (99) (99)");
 	});
 
 
@@ -26,40 +26,37 @@ $(function(){
   	easing: 'linear', 
   	scrollTime: 1400,       // how long (in ms) the animation takes
 	activeClass: 'active', // class given to the active nav element
-	onPageChange: null,    // function(pageIndex) that is called when page is changed
+	onPageChange: check_size(),    // function(pageIndex) that is called when page is changed
 	topOffset: 0     
   });
 });
 
 
 
+ check_size();
 
-if ($(window).scrollTop() > 51) {
-	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	 if (scrollTop> 51)
+function check_size(){
+   var scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+    if ( scrollTop > 52)
     {
+        if ($("#footer_second").hasClass("navbar-fixed-top")) return;
         $("#footer_second").addClass('navbar-fixed-top');
     } 
     else 
     {
+        if (!$("#footer_second").hasClass("navbar-fixed-top")) return;
         $("#footer_second").removeClass("navbar-fixed-top");
+        console.log("срf");
     }
 }
 
-$(window).scroll(function() { 
-    if ($(window).scrollTop() > 52)
-    {
-        $("#footer_second").addClass('navbar-fixed-top');
-    } 
-    else 
-    {
-        $("#footer_second").removeClass("navbar-fixed-top");
-    }
+
+$(window).scroll(function() {
+   check_size();
 });
 
 jQuery(document).ready(function ($) {
     'use strict';
-
     // CENTERED MODALS
     // phase one - store every dialog's height
     $('.modal').each(function () {
