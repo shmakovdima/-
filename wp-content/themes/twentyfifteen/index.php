@@ -17,8 +17,7 @@
 
 get_header(); ?>
 
-<div id="main">
-<section id="introduction" class="wow fadeIn animated" data-wow-duration="1s">
+<section data-scroll-index="0" id="introduction" class="wow fadeIn animated" data-wow-duration="1s">
 
     <section id="slider" class="wow fadeIn animated" data-wow-duration="1s">
           <div id="carousel_main" class="carousel slide carousel-fade" data-ride="carousel_main">
@@ -122,14 +121,11 @@ get_header(); ?>
                       <?php 
                       
                           if  (in_array($counter, array(2,3))) {
-                            if ($counter==2) {
+                           
                               echo '<div class="col-md-3 col-sm-6 hidden-xs hidden-sm topped"> ';
-                              
-                            }else{
-                              echo '<div class="col-md-3 col-sm-6 hidden-xs hidden-sm"> ';
-                            }
+                            
                           }else{
-                              echo ' <div class="col-md-3 col-sm-6">';
+                              echo ' <div class="col-md-3 col-sm-6 topped">';
                           }
 
                            $counter++;
@@ -193,7 +189,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="top_tours" class="wow fadeIn animated"  data-wow-duration="1s">
+<section id="top_tours" data-scroll-index="1" class="wow fadeIn animated"  data-wow-duration="1s">
     <div class="h2__wrap">
       <span>Наши туры</span>
       <br>
@@ -284,7 +280,7 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section id="burn_tours" class="wow fadeIn animated"  data-wow-duration="1s">
+<section id="burn_tours" data-scroll-index="2"  class="wow fadeIn animated"  data-wow-duration="1s">
   <div class="h2__wrap">
       <span>Наши туры</span>
       <br>
@@ -295,7 +291,7 @@ get_header(); ?>
             <?php $posts = get_posts("category_name=hot_tours&numberposts=8&orderby=date&post_status=publish"); ?>
                 <?php if ($posts) : ?>
                 <?php foreach ($posts as $post) : setup_postdata ($post); ?>
-                     <div class="col-md-3 col-sm-6">
+                     <div class="col-md-3 col-sm-6 topped">
                       <div class="item_tour">
                           <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
@@ -322,7 +318,7 @@ get_header(); ?>
 
 </section>
 
-<section id="work_scheme" class="wow fadeIn animated"  data-wow-duration="1s">
+<section id="work_scheme" data-scroll-index="3" class="wow fadeIn animated"  data-wow-duration="1s">
     <div class="h2__wrap">
       <h2 class="white">Схема работы</h2>
       <br>
@@ -359,7 +355,7 @@ get_header(); ?>
         </div>
       </div>
 </section>
-<section id="review" class="wow fadeIn animated"  data-wow-duration="1s">
+<section id="review" class="wow fadeIn animated" data-scroll-index="4" data-wow-duration="1s">
 	<div class="h2__wrap">
 		<h2>Отзывы клиентов</h2>
 	</div>
@@ -428,7 +424,7 @@ get_header(); ?>
   		</div>
 	</div>
 </section>
-<section id="contact" class="wow fadeIn animated"  data-wow-duration="1s">
+<section id="contact" data-scroll-index="5" class="wow fadeIn animated"  data-wow-duration="1s">
   <div class="h2__wrap">
     <h2>Наши контакты</h2>
   </div>

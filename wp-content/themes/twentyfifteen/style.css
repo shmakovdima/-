@@ -73,8 +73,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 }
 
-section {
+section, footer {
 	visibility: hidden;
+}
+header * {
+	visibility: visible;
 }
 
 .col-xs-15,
@@ -139,8 +142,16 @@ a {
 }
 
 a:hover {
-
+	color: white;
+	text-transform: none;
 }
+
+
+a:active, a:focus,  a.active, a:visited {
+	color: white;
+	text-transform: none;
+}
+
 
 
 span {
@@ -153,7 +164,7 @@ span {
 .h2__wrap {
 	position: relative;
 	width: 100%;
-	height: 200px;
+	height: 260px;
 	text-align: center;
 
 }
@@ -185,10 +196,142 @@ h1 {
 	text-align: left;
 	margin-left: 0px;
 	left: 15px;
-	bottom: 130px;
+	z-index: 5000;
+	bottom: 160px;
 	position: relative;
 }
 
+header {
+	position: absolute;	
+	z-index: 1200;
+	width: 100%;
+}
+
+header section {
+	background-color:  rgba(16, 16, 16, 0.5);
+}
+#footer_first {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	height: 50px;
+	line-height: 50px;
+}
+
+#footer_second  {
+	height: 80px;
+	line-height: 80px;
+}
+
+.header_phones {
+	padding-left: 45px;
+	font-weight: 600;
+	color:  #ffffff;
+	margin-left: -15px;
+	left: 5px;
+	background: url(img/call.svg) center left no-repeat;
+	background-size: 50px auto;
+}
+
+.header_phones a:hover {
+	color: rgba(255,255,255,0.6);
+	text-decoration: none;
+
+}
+
+
+.follow_us {
+	color:  rgba(255, 255, 255, 0.89);
+	font-size: 15px;
+}
+
+.follow_us a  {
+	color:  rgba(255, 255, 255, 0.6);
+	font-size: 22px;
+	transition: 400ms all linear;
+}
+
+.follow_us a + a {
+	margin-right: 30px;
+}
+
+.follow_us  a+span  {
+	margin-right: 20px;
+}
+
+.follow_us * {
+	float: right;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+}
+
+.follow_us a:hover {
+	color: white;
+}
+
+.navbar-brand img {
+	height: 100%;
+	width: auto;
+}
+
+ul.navbar-right li+li {
+	margin-left: 42px;
+}
+
+ul.navbar-right li a  {
+	padding: 0px;
+	overflow: visible;
+	display: inline;
+	line-height: 80px;
+	padding: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 4px;
+	border-bottom: 2px solid transparent;
+}
+
+.nav>li>a:hover:not(.active), .nav>li>a:focus:not(.active) {
+ 	text-decoration: none;
+	background: rgb(255, 255, 255, 0.302);
+}
+
+.nav>li>a.active {
+	border-radius: 0px;
+	background: none!important;
+	border-bottom: 2px solid white;
+}
+
+.nav>li>a.active:hover {
+	background: none;
+}
+
+ul.navbar-right {
+	padding: 0px;
+	margin-right: 10px;
+}
+
+.navbar {
+	z-index: 2000;
+}
+
+
+ul.navbar-right li {
+	padding: 0px;
+	height: 80px;
+	font-size: 17px;
+	line-height: 80px;
+	color:  #ffffff;
+
+}
+
+ul.navbar-right li:hover a {
+
+}
+
+.navbar-brand {
+	padding: 0px;
+	height: 80px;
+
+}
 
 h2 {
 	display: inline;
@@ -198,7 +341,7 @@ h2 {
 	font-weight: 400;
 	color:  #5a5a5a;
 
-	line-height: 200px;
+	line-height: 280px;
 	font-size: 30px;/* Приближение из-за подстановки шрифтов */
 	font-weight: 400;
 	text-transform: uppercase;
@@ -253,10 +396,12 @@ h2.white {
 	background-color:  rgba(16, 16, 16, 0.4);
 }
 
-.order__form span {
+.order__form span:not(.wpcf7-form-control-wrap)  {
 	color:  rgba(255, 255, 255, 0.9);
 	font-size: 14px;
 	line-height: 16px;
+	padding: 3px 0px;
+	padding-bottom: 7px;
 	text-align: center;
 	width: 100%;
 	display: block;
@@ -354,9 +499,6 @@ div.wpcf7 {
 	overflow-x:hidden;
 }
 
-#slider .order__form {
-	
-}
 
 .slider_row {
 	margin-top: 17%;
@@ -379,9 +521,17 @@ div.wpcf7 {
 	border-radius: 5px;
 	box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.18);
 	margin-bottom: 40px;
+	
+
 }
 
 .topped {
+	top: 0px;
+	transition: 400ms all linear;
+	cursor: pointer;
+}
+
+.topped:hover {
 	top: -25px;
 }
 
@@ -499,7 +649,7 @@ div.wpcf7-validation-errors {
     width: 140px;
     left: 50%;
     font-family: 'Open Sans', sans-serif;
-    top: 60px;
+    top: 100px;
     margin-left: -70px;
     text-align: center;
     line-height: 30px;
@@ -515,7 +665,7 @@ div.wpcf7-validation-errors {
 /*Карта мира*/
 #world_map {
 	
-	padding-top: 90px;
+	padding-top: 60px;
 	height: 300px;
 }
 
@@ -530,9 +680,6 @@ div.wpcf7-validation-errors {
 	padding-left: 0px;
 }
 
-#world_map div {
-	
-}
 
 #world_map div div {
 	height: 100%;
@@ -588,7 +735,7 @@ div.wpcf7-validation-errors {
 /*Схема работы*/
 
 #work_scheme {
-	height: 695px ;
+	height: 725px ;
 	background: url(img/work_scheme.png) bottom center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -892,7 +1039,7 @@ small:before {
 /*Топ туры*/
 
 #top_tours {
-	    height: 695px;
+	    height: 745px;
 	background: url(img/top_tours.png) center no-repeat;
 	background-size: cover;
 
@@ -1102,6 +1249,7 @@ footer span a + a {
 		padding-top: 40px;
 		padding-right: 0px!important;
 		margin: 0 auto;
+		margin-top: 80px;
 	}
 
 	#slider .carousel-control  {
@@ -1152,7 +1300,7 @@ footer span a + a {
 		top: 0px;
 		height: 100%;
 		width: 100%;
-		min-height: 752px;
+		min-height: 902px;
 		position: absolute;
 	}
 
@@ -1302,6 +1450,7 @@ footer span a + a {
 	h1 {
 		min-width: 0px;
 		width: 100%;
+
 		font-size: 40px;
 		padding-right: 30px;
 	}
@@ -1376,7 +1525,7 @@ footer span a + a {
 	}
 
 	#world_map {
-		padding-top: 45px;
+		margin-top: 45px;
 		padding-bottom: 45px;
 	}
 
