@@ -5,10 +5,10 @@
 
 	new WOW().init();
   //Set the carousel options
- /*$('#quote-carousel, #Carousel, .carousel').carousel({
+ $('#quote-carousel, #Carousel, .carousel').carousel({
     pause: true,
     interval: 5000,
-  });*/
+  });
 
 
 	jQuery(function(){
@@ -32,7 +32,41 @@ $(function(){
 });
 
 
+$(document).on("click", ".carousel_right_modal button", function(){
+	$('body').css({
+		"overflow":"hidden",
+		"padding-right": "15px"
+	});
 
+	$('.navbar-fixed-top, .modal-open .navbar-fixed-bottom').css({
+	
+		"padding-right": "15px"
+	});
+
+	
+	$("#myModal3 input[type=hidden]").val($(this).attr("data-tour"));
+});
+
+
+
+
+$('#myModal3').on('hidden.bs.modal', function () {
+	
+    $('body').css({
+		"overflow":"auto",
+		"padding-right": "0px"
+	});
+    $('.navbar-fixed-top, .modal-open .navbar-fixed-bottom').css({	 
+		"padding-right": "0px"
+	});
+})
+
+
+$(".item_tour:not(.item_tour_slider) button").click(function(){
+	var id_tour = $(this).attr("data-tour");
+	$(".modal-body .item").removeClass("active");
+	$(".tour"+id_tour).addClass("active");
+});
 
  check_size();
 

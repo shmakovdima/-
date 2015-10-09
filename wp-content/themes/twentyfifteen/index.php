@@ -128,21 +128,18 @@ get_header(); ?>
                               echo ' <div class="col-md-3 col-sm-6 topped">';
                           }
 
-                           $counter++;
-                      ?>
-
-
-                    
+                           
+                      ?>                    
                       <div class="item_tour">
                           <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more" data-toggle="modal" data-target="#myModal2"  tabindex="-1">Подробнее</button>
+                          <button class="more" data-toggle="modal" data-target="#myModal2"  tabindex="-1" data-tour='<?php echo $counter;?>'>Подробнее</button>
                       </div>
                     </div>
 
-                   <?php endforeach; ?>
+                   <?php $counter++; endforeach; ?>
                   <?php endif; ?> 
            
           
@@ -286,8 +283,10 @@ get_header(); ?>
   </div>
    <div class="container">
         <div class="row">
+           <?php $counter=0; ?>
             <?php $posts = get_posts("category_name=hot_tours&numberposts=8&orderby=date&post_status=publish"); ?>
                 <?php if ($posts) : ?>
+
                 <?php foreach ($posts as $post) : setup_postdata ($post); ?>
                      <div class="col-md-3 col-sm-6 topped">
                       <div class="item_tour">
@@ -295,10 +294,10 @@ get_header(); ?>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more" data-toggle="modal" data-target="#myModal2"  tabindex="-1">Подробнее</button>
+                          <button class="more" data-tour='<?php echo $counter;?>' data-toggle="modal" data-target="#myModal4"  tabindex="-1">Подробнее</button>
                       </div>
                     </div>
-
+                    <?php $counter++; ?>
                    <?php endforeach; ?>
                   <?php endif; ?> 
            
