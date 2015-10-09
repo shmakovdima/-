@@ -27,6 +27,11 @@ inspired from http://codepen.io/Rowno/pen/Afykb
 
 }
 
+.row {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
 
 
 /*
@@ -159,9 +164,6 @@ html, body {
 
 }
 
-body {
-	transition: 200ms all ease-out;
-}
 
 a {
 	color: white;
@@ -270,10 +272,13 @@ header section {
 	padding-left: 45px;
 	font-weight: 600;
 	color:  #ffffff;
-	margin-left: -15px;
+	
 	left: 5px;
 	background: url(img/call.svg) center left no-repeat;
 	background-size: 50px auto;
+}
+.wpcf7-mail-sent-ok {
+	display: none!important;
 }
 
 .header_phones a:hover {
@@ -405,6 +410,8 @@ h2.white {
 	opacity: 0.6;
 }
 
+
+
 .btn,  .btn:focus, button.confirm, button.confirm:focus  {
 	color:  rgba(255, 255, 255, 0.9);
 	font-size: 18px;/* Приближение из-за подстановки шрифтов */
@@ -421,7 +428,7 @@ h2.white {
 	background: linear-gradient(0deg, #a2c44d 0%, #b1cf60 100%)!important;
 	padding: 8px 14px;
 	box-shadow: 1px 2px 0px 0px #7b923d!important;
-	transition: 400ms background ease-out;
+	transition: 400ms all ease-out;
 
 }
 
@@ -684,7 +691,7 @@ div.wpcf7 {
 	    max-height: 1200px;
 	    margin: 0px;
 }
-.navbar-right.navbar-collapse.collapse.in {
+.navbar-right.navbar-collapse.collapse.in, .navbar-right.navbar-collapse.collapsing{
 	background-color: rgba(16, 16, 16, 0.5);
 }
 
@@ -1801,6 +1808,7 @@ footer span a + a {
 
 	.navbar-header {
 		width: 100%;
+		overflow: hidden;
 	}
 
     .navbar-collapse.collapse {
@@ -1850,9 +1858,18 @@ footer span a + a {
 
 
 @media(max-width:500px)  { 
+
+	.carousel_right_modal {
+		float: none;
+	}
+
 	h2 {
 		line-height: 40px;
 		
+	}
+
+	.carousel_left_modal {
+		padding-top: 0px;
 	}
 
 	.h2__wrap {
@@ -1903,7 +1920,7 @@ footer span a + a {
 		padding-top: 30px;
 	}
 
-	.carousel-control {
+	section .carousel-control {
 		display: none!important;
 	}
 	.col-xs-offset-2 {

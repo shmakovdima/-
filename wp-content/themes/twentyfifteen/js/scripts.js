@@ -5,7 +5,7 @@
 
 	new WOW().init();
   //Set the carousel options
- $('#quote-carousel, #Carousel, .carousel').carousel({
+ $('#quote-carousel, #Carousel, #slider .carousel').carousel({
     pause: true,
     interval: 5000,
   });
@@ -44,13 +44,11 @@ $(document).on("click", ".carousel_right_modal button", function(){
 	});
 
 	
-	$("#myModal3 input[type=hidden]").val($(this).attr("data-tour"));
+	$("#myModal input[type=hidden]").val($(this).attr("data-tour"));
 });
 
 
-
-
-$('#myModal3').on('hidden.bs.modal', function () {
+$('#myModal').on('hidden.bs.modal', function () {
 	
     $('body').css({
 		"overflow":"auto",
@@ -59,8 +57,8 @@ $('#myModal3').on('hidden.bs.modal', function () {
     $('.navbar-fixed-top, .modal-open .navbar-fixed-bottom').css({	 
 		"padding-right": "0px"
 	});
+	$("#myModal input[type=hidden]").val();
 })
-
 
 $(".item_tour:not(.item_tour_slider) button").click(function(){
 	var id_tour = $(this).attr("data-tour");
@@ -71,6 +69,7 @@ $(".item_tour:not(.item_tour_slider) button").click(function(){
  check_size();
 
 function check_size(){
+	
    var scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
     if ( scrollTop > 52)
     {

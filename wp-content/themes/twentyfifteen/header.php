@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href='https://fonts.googleapis.pcom/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,600italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

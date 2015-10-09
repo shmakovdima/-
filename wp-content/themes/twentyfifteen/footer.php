@@ -16,34 +16,11 @@
     <!-- Modal content-->
    
       <div class="modal-body">
-      		
-        			<div class="row">
-        	
-		                <div class="col-xs-10 col-xs-offset-1  col-sm-offset-2 col-sm-8 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 order__form">
-		                    <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
-		                    <span>Гарантируем конфиденциальность<br> 
-		                    ваших данных</span>
-		                    <button type="button" class="close" data-dismiss="modal"></button>
-		                </div>
-         			 </div>
-        			
-        		
-        	</div>
-     
-    </div>
-
-  </div>
-</div>
-
-<div id="myModal3" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->  
-      <div class="modal-body">
           
               <div class="row">
           
                     <div class="col-xs-10 col-xs-offset-1  col-sm-offset-2 col-sm-8 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 order__form">
-                        <?php echo do_shortcode('[contact-form-7 id="117" title="Запись на конкретный тур"]' ); ?>
+                        <?php echo do_shortcode( '[contact-form-7 id="13" title="Связь с нами"]' ); ?>
                         <span>Гарантируем конфиденциальность<br> 
                         ваших данных</span>
                         <button type="button" class="close" data-dismiss="modal"></button>
@@ -58,6 +35,7 @@
   </div>
 </div>
 
+
 <div id="myModal4" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -65,7 +43,7 @@
    
       <div class="modal-body">
        
-		      <div id="carousel_modal_slider_tour" class="slide carousel-fade " data-ride="carousel_modal_slider_tour">  
+		      <div id="carousel_m_tour" class="carousel slide  carousel-fade" data-ride="carousel_m_tour">  
                 <!-- Carousel items -->
                 <div class="carousel-inner">
 
@@ -85,15 +63,15 @@
                   ?>         
                             <div class="item_tour item_tour_slider">
                                 <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')">
-                                      <a data-slide="prev" href="#carousel_modal_slider_tour" class="left carousel-control"></a>
-                                      <a data-slide="next" href="#carousel_modal_slider_tour" class="right carousel-control"></a>
+                                      <a data-slide="prev" href="#carousel_m_tour" class="left carousel-control"></a>
+                                      <a data-slide="next" href="#carousel_m_tour" class="right carousel-control"></a>
                                 </div>
                                   <div class="carousel_right_modal">
                                       
                                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                                            <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                                          <button data-dismiss="modal" class="btn" data-toggle="modal" data-target="#myModal3"  tabindex="-1" data-tour="<?php echo $post->post_title;?>">Заказать тур</button>
+                                          <button data-dismiss="modal" class="btn" data-toggle="modal" data-target="#myModal"  tabindex="-1" data-tour="<?php echo $post->post_title;?>">Заказать тур</button>
                                       
                                   </div>
                                   <div class="carousel_left_modal">
@@ -130,7 +108,7 @@
    
       <div class="modal-body">
        
-          <div id="carousel_modal_slider_tour2" class="slide carousel-fade " data-ride="carousel_modal_slider_tour2">  
+          <div id="carousel_t" class="carousel slide carousel-fade" data-ride="carousel_t">  
                 <!-- Carousel items -->
                 <div class="carousel-inner">
 
@@ -150,15 +128,15 @@
                   ?>         
                             <div class="item_tour item_tour_slider">
                                 <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')">
-                                      <a data-slide="prev" href="#carousel_modal_slider_tour2" class="left carousel-control"></a>
-                                      <a data-slide="next" href="#carousel_modal_slider_tour2" class="right carousel-control"></a>
+                                      <a data-slide="prev" href="#carousel_t" class="left carousel-control"></a>
+                                      <a data-slide="next" href="#carousel_t" class="right carousel-control"></a>
                                 </div>
                                   <div class="carousel_right_modal">
                                       
                                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                                            <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                                          <button data-dismiss="modal" class="btn" data-toggle="modal" data-target="#myModal3"  tabindex="-1" data-tour="<?php echo $post->post_title;?>">Заказать тур</button>
+                                          <button data-dismiss="modal" class="btn" data-toggle="modal" data-target="#myModal"  tabindex="-1" data-tour="<?php echo $post->post_title;?>">Заказать тур</button>
                                       
                                   </div>
                                   <div class="carousel_left_modal">
@@ -211,6 +189,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
