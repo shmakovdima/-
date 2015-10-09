@@ -138,7 +138,7 @@ get_header(); ?>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more" data-toggle="modal" data-target="#myModal2">Подробнее</button>
+                          <button class="more" data-toggle="modal" data-target="#myModal2"  tabindex="-1">Подробнее</button>
                       </div>
                     </div>
 
@@ -274,7 +274,7 @@ get_header(); ?>
                 </ol>
         </div>
           <div class="row text-center button_tour">
-            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal"  tabindex="-1">Заказать подбор тура!</button>
         </div>
     </div>
 </section>
@@ -295,7 +295,7 @@ get_header(); ?>
                           <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
                           <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
-                          <button class="more" data-toggle="modal" data-target="#myModal2">Подробнее</button>
+                          <button class="more" data-toggle="modal" data-target="#myModal2"  tabindex="-1">Подробнее</button>
                       </div>
                     </div>
 
@@ -310,7 +310,7 @@ get_header(); ?>
 
   <div class="container">
         <div class="row text-center button_tour">
-            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal"  tabindex="-1">Заказать подбор тура!</button>
         </div>
   </div>
 
@@ -349,7 +349,7 @@ get_header(); ?>
     </div>
       <div class="container">
         <div class="row text-center work_scheme__button">
-            <button class="btn" data-toggle="modal" data-target="#myModal">Заказать подбор тура!</button>
+            <button class="btn" data-toggle="modal" data-target="#myModal"  tabindex="-1">Заказать подбор тура!</button>
         </div>
       </div>
 </section>

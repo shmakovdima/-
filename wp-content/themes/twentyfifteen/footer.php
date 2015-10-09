@@ -41,9 +41,8 @@
     <!-- Modal content-->
    
       <div class="modal-body">
-        	<div class="row">
-		        <div class="col-md-6 col-md-offset-3">
-		        		 <div id="Carousel" class="carousel slide col-md-12 col-md-offset-0" >  
+       
+		      <div id="carousel_modal_slider_tour" class="carousel slide carousel-fade" data-ride="carousel_modal_slider_tour">  
                 <!-- Carousel items -->
                 <div class="carousel-inner">
 
@@ -54,41 +53,46 @@
                 <?php foreach ($posts as $post) : setup_postdata ($post); ?>
 
                   <?php if (($counter==0)) {
-                      echo '<div class="item active"><div class="row">';
+                      echo '<div class="item active">';
                   }else{
                     
-                         echo '<div class="item "><div class="row">';
+                         echo '<div class="item ">';
                    
                   }
-                  ?>          
-
-                        
-                             <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                          }
-
-
-
-                            <div class="item_tour">
-                                <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')"></div>
-                                <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
-                                <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
-                                <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                  ?>         
+                            <div class="item_tour item_tour_slider">
+                                <div class="img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID));  ?>')">
+                                      <a data-slide="prev" href="#carousel_modal_slider_tour" class="left carousel-control"></a>
+                                      <a data-slide="next" href="#carousel_modal_slider_tour" class="right carousel-control"></a>
+                                </div>
+                                  <div class="carousel_right_modal">
+                                      
+                                          <span class="place"><span><?php echo get_post_meta($post->ID, 'city', true); ?></span>, <?php echo get_post_meta($post->ID, 'country', true); ?></span>
+                                           <span class="dates"><?php echo get_post_meta($post->ID, 'data_start', true); ?> - <?php echo get_post_meta($post->ID, 'data_end', true); ?></span>
+                                          <span class="price">от <?php echo number_format(get_post_meta($post->ID, 'cost', true), 0,"."," "); ?> руб</span>
+                                          <button class="btn" data-tour="<?php echo $post->post_content;?>">Заказать тур</button>
+                                      
+                                  </div>
+                                  <div class="carousel_left_modal">
+                                      <?php echo $post->post_content;?>
+                                  </div>
+                                  
+                                
                                
                             </div>
-                            </div>
                           
+                          
+                                  
+                          </div><!--.item-->
                          
-                            </div><!--.row--></div><!--.item-->';
-                         
-                        <?php endforeach; ?>
+                        <?php $counter++; endforeach; ?>
                   <?php endif; ?> 
-                   
+              
                 </div>
-                 <a data-slide="prev" href="#Carousel" class="left carousel-control"></a>
-                <a data-slide="next" href="#Carousel" class="right carousel-control"></a>
+                 <button type="button" class="close" data-dismiss="modal"></button>
+               
 
-        </div>
-        		</div>
+    
         	</div>
      
     </div>

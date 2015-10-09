@@ -5,14 +5,14 @@
 
 	new WOW().init();
   //Set the carousel options
-  $('#quote-carousel, #Carousel, .carousel').carousel({
+ /*$('#quote-carousel, #Carousel, .carousel').carousel({
     pause: true,
     interval: 5000,
-  });
+  });*/
 
 
 	jQuery(function(){
-	    jQuery(".contact_phone").mask("375 (99) (99) (99) (99)");
+	    jQuery(".contact_phone").mask("+375 (99) (99) (99) (99)");
 	});
 
 
@@ -30,6 +30,7 @@ $(function(){
 	topOffset: 0     
   });
 });
+
 
 
 

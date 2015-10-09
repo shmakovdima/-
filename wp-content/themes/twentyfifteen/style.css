@@ -68,6 +68,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 
 
+
 .carousel-inner {
 	background-image: none;
 
@@ -79,6 +80,8 @@ section, footer {
 header * {
 	visibility: visible;
 }
+
+
 
 .col-xs-15,
 .col-sm-15,
@@ -99,7 +102,21 @@ header * {
         width: 20%;
         float: left;
     }
+
+    #myModal2 .modal-dialog {
+    	width: 740px;
+    		padding-bottom: 30px;
+	padding-top: 30px;
+	padding-right: 70px;
+	padding-left: 70px;
+    }
+
+     #myModal2 .carousel-inner {
+     	overflow: auto;
+	}
 }
+
+
 @media (min-width: 992px) {
     .col-md-15 {
         width: 20%;
@@ -154,8 +171,8 @@ a:active, a:focus,  a.active, a:visited {
 
 .close {
 	position: absolute;
-	top: -45px;
-	right: -45px;
+	top: -30px;
+	right: -52px;
 	height: 30px;
 	width: 30px;
 	opacity: 0.6;
@@ -382,6 +399,7 @@ h2.white {
 	color:  rgba(255, 255, 255, 0.9);
 	font-size: 18px;/* Приближение из-за подстановки шрифтов */
 	font-weight: normal;
+	text-shadow: 0px 1.6px 0px rgba(120, 146, 56, 0.75);
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -463,6 +481,26 @@ h2.white {
     font-family: 'Open Sans', sans-serif;
 }
 
+.modal-body .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgb(190, 190, 190);
+    font-family: 'Open Sans', sans-serif;
+}
+.modal-body .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: rgb(190, 190, 190);
+   opacity:  1;
+    font-family: 'Open Sans', sans-serif;
+}
+.modal-body .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:  rgb(190, 190, 190);
+   opacity:  1;
+    font-family: 'Open Sans', sans-serif;
+}
+.modal-body .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:  rgb(190, 190, 190);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 .wpcf7-not-valid-tip {
 	display: none!important;
 }
@@ -474,8 +512,117 @@ h2.white {
 }
 
 .modal-body  .order__form .form-control {
+	 color:  rgb(190, 190, 190);
+	 box-shadow: none;
+	 border-color: rgb(190, 190, 190);
+}
+
+.modal-body  .order__form .form-control:focus,
+ .modal-body  .order__form .form-control:hover  {
+ 	border-color: rgb(18, 163, 255);
+ 	color: rgb(84, 84, 84);
+}
+
+.modal-body  .order__form span:not(.wpcf7-form-control-wrap)  {
+	color:  rgba(115, 114, 114, 0.9);
+}
+
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+padding-right: 15px;
+}
+
+.modal-open {
 
 }
+
+.modal-body {
+	
+}
+
+.carousel_left_modal {
+	position: relative;
+	
+	padding: 35px;
+	
+	margin-right: 0px;
+	padding-right: 20px;
+	color:  #616161;
+font-size: 16px;
+
+}
+.carousel_right_modal {
+	position: relative;
+	float: right;
+	z-index: 300;
+	width: auto;
+	border-left: 1px solid rgba(0,0,0, 0.1);
+	margin-top: 35px;
+	margin-bottom: 35px;
+	height: 100%;
+	margin-right: 0px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.modal-body .carousel-control.left {
+	position: relative;
+	float: left;
+	left: 0px!important;
+	width: 15%;
+}
+
+.modal-body .item_tour button::after {
+	display: none;
+}
+.modal-body .item_tour button{
+	font-size: 18px;
+	margin: 10px auto;
+	max-width:180px;
+}
+
+
+.modal-body .item_tour {
+	overflow: auto;
+}
+.modal-body .carousel-control.right {
+	position: relative;
+	float: right;
+	right: 0px!important;
+	width: 15%;
+}
+
+
+.carousel_right_modal span.place {
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.item_tour.item_tour_slider .img a {
+	transition: 300ms all linear;
+	height: 100%;
+}
+
+.item_tour.item_tour_slider .img {
+	height: 275px;
+}	
+
+
+
+
+
+.item_tour.item_tour_slider .img a:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item_tour_slider {
+
+}
+
+body {
+	/*padding-right: 0px!important;
+	overflow: scroll!important*/
+}
+
 
 .form-control.wpcf7-not-valid, .form-control.wpcf7-not-valid:hover {
 
