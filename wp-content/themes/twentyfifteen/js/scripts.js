@@ -44,7 +44,7 @@ $(document).on("click", ".carousel_right_modal button", function(){
 	});
 
 	
-	$("#myModal input[type=hidden]").val($(this).attr("data-tour"));
+	$("#myModal input[type='hidden']").val($(this).attr("data-tour"));
 });
 
 
@@ -57,7 +57,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     $('.navbar-fixed-top, .modal-open .navbar-fixed-bottom').css({	 
 		"padding-right": "0px"
 	});
-	$("#myModal input[type=hidden]").val();
+	$("#myModal input[type='hidden]'").val();
 })
 
 $(".item_tour:not(.item_tour_slider) button").click(function(){
